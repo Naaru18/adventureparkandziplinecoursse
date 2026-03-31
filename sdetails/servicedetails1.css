@@ -829,12 +829,12 @@ body.dark p {
 
 .big-card {
     flex-direction: column;
-    align-items: flex-start; /* moves all content to left */
+    align-items: flex-start; 
     text-align: left;
   }
 
   .big-card .icon {
-    align-self: flex-start; /* ensures icon stays left */
+    align-self: flex-start; 
   }
 
   .right {

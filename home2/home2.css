@@ -205,6 +205,7 @@ body.dark .btn.secondary:hover {
 .ecozip-text h2 span {
   background: linear-gradient(135deg, #3b82f6, #e66a00);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

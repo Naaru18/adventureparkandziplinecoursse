@@ -23,7 +23,7 @@ body {
               url("../Images/loginbg.jpg") center/cover no-repeat;
 }
 
-/* CONTAINER */
+
 .auth-container {
   width: 100%;
   max-width: 380px;
@@ -33,7 +33,7 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* TEXT */
+
 .brand {
   text-align: center;
   color: var(--orange);
@@ -47,7 +47,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* TOGGLE */
+
 .form-toggle {
   display: flex;
   margin-bottom: 1rem;
@@ -68,7 +68,7 @@ body {
   font-weight: bold;
 }
 
-/* FORMS */
+
 .auth-form {
   display: none;
 }
@@ -81,7 +81,7 @@ body {
   color: var(--black);
 }
 
-/* INPUT */
+
 input {
   width: 100%;
   padding: 12px;
@@ -96,7 +96,7 @@ input::placeholder {
   color: var(--black);
 }
 
-/* BUTTON */
+
 button[type="submit"] {
   width: 100%;
   padding: 12px;
@@ -112,7 +112,7 @@ button:hover {
   background: var(--orange);
 }
 
-/* PASSWORD */
+
 .password-group {
   position: relative;
 }
@@ -124,7 +124,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* STRENGTH */
+
 .password-strength {
   height: 5px;
   border-radius: 5px;
@@ -134,7 +134,7 @@ button:hover {
 .medium { background: var(--blue); width: 60%; }
 .strong { background: var(--black); width: 100%; }
 
-/* SWITCH */
+
 .switch-text {
   text-align: center;
   font-size: 14px;
@@ -166,9 +166,9 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-/* CENTER BELOW CARD */
+
 body {
-  flex-direction: column;  /* 🔥 important */
+  flex-direction: column;  
 }
 
 .back-home:hover {
@@ -179,7 +179,7 @@ body {
 .back-home:active {
   transform: scale(0.97);
 }
-/* MOBILE */
+
 @media (max-width: 639px) {
   .auth-container {
     padding: 1.5rem;
@@ -190,21 +190,21 @@ body {
   }
 }
 
-/* TABLET */
+
 @media (min-width: 640px) and (max-width: 1023px) {
   .auth-container {
     max-width: 420px;
   }
 }
 
-/* LAPTOP */
+
 @media (min-width: 1024px) and (max-width: 1279px) {
   .auth-container {
     max-width: 400px;
   }
 }
 
-/* LARGE */
+
 @media (min-width: 1280px) {
   .auth-container {
     max-width: 420px;
