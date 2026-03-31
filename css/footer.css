@@ -143,43 +143,36 @@ body.dark .footer {
   margin: 40px auto 0;     
 }
 
-
-
 @media (max-width: 639px) {
-  .footer-bottom {
-    width: 90%;              
-    margin: 30px auto 0;
-    padding-top: 15px;
-    font-size: 13px;
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand .ez-brand {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
   }
 }
 
-
 @media (min-width: 640px) and (max-width: 1023px) {
-  .footer-bottom {
-    width: 85%;
-    margin: 35px auto 0;
-    padding-top: 18px;
-    font-size: 14px;
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 
 @media (min-width: 1024px) and (max-width: 1279px) {
-  .footer-bottom {
-    width: 85%;
-    margin: 40px auto 0;
-    padding-top: 20px;
-    font-size: 14px;
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-
 @media (min-width: 1280px) {
-  .footer-bottom {
-    width: 85%;
-    margin: 45px auto 0;
-    padding-top: 20px;
-    font-size: 15px;
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
