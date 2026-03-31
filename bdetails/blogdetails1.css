@@ -9,12 +9,12 @@ body {
 .blog-hero {
   position: relative;
 
-  min-height: 60vh;
+  min-height: 80vh;
 
   display: flex;
   align-items: center;
 
-  padding: 80px 20px 80px; 
+  padding: 200px 20px 150px; 
 
   background: url("../Images/bdetailsbg.jpg") center/cover no-repeat;
 
@@ -112,8 +112,8 @@ body.dark .blog-hero .overlay {
 @media (max-width: 639px) {
 
   .blog-hero {
-    min-height: auto;
-    padding: 100px 20px 50px;
+    min-height: 75vh;
+    padding: 150px 20px 100px;
   }
 
   .hero-content {

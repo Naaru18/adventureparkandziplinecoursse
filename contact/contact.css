@@ -14,7 +14,8 @@ body {
 .contact-banner {
   position: relative;
   width: 100%;
-  padding: 140px 0 80px;
+  min-height: 85vh;
+  padding: 200px 0 120px;
 
   background: url("../Images/contactbg.jpg") center/cover no-repeat;
 
@@ -130,8 +131,8 @@ body.dark .contact-banner p{
 @media (max-width: 639px) {
 
   .contact-banner {
-    padding: 100px 0 60px;
-    min-height: 60vh;
+    padding: 150px 0 100px;
+    min-height: 75vh;
   }
 
   .contact-banner h1 {
@@ -427,7 +428,7 @@ body.dark .info-item p{
     width: 100%;
   }
   .input-group  {
-  width:90%
+  width:100%
 }
 }
 

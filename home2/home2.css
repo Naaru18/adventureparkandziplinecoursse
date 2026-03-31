@@ -121,7 +121,6 @@ body.dark .highlight {
 }
 
 body.dark .btn.secondary {
-  border: 2px solid #fff;
   color: #fff;
 }
 
@@ -134,8 +133,8 @@ body.dark .btn.secondary:hover {
 @media (max-width: 639px) {
 
   .home2-hero {
-    padding: 130px 15px 70px;
-    min-height: auto;
+    padding: 200px 15px 100px;
+    min-height:75vh;
   }
 
   .hero-content h1 {

@@ -15,14 +15,14 @@ body {
 }
 .about-banner-v3 {
   width: 100%;
-  min-height: 70vh;
+  min-height: 85vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 
-  padding: 120px 20px 80px;
+  padding: 200px 20px 100px;
 
   background: linear-gradient(
     135deg,
@@ -147,8 +147,8 @@ body.dark .btn.secondary:hover {
 @media (max-width: 639px) {
 
   .about-banner-v3 {
-    padding: 130px 15px 70px;
-    min-height: auto;
+    padding: 200px 15px 120px;
+    min-height: 75vh;
   }
 
   .banner-inner h1 {

@@ -34,7 +34,7 @@ body.dark {
   justify-content: center;
   text-align: center;
 
-  padding: 150px 10% 100px 10%;
+  padding: 200px 10% 150px 10%;
 
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
@@ -121,8 +121,8 @@ body.dark .banner-btn{
 
 @media (max-width: 639px) {
   .blog-banner {
-    min-height: 260px;
-    padding: 100px 15px;
+    min-height: 75vh;
+    padding: 150px 15px 100px;
   }
 
   .banner-content h1 {
