@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecozip signup</title>
-    <link rel="stylesheet" href="../login/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoZip Login</title>
+
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
- 
 
 <div class="auth-container">
 
-  <h1 class="brand">Zipline Adventure</h1>
+  <h1 class="brand">EcoZip Adventure</h1>
   <p class="tagline">Feel the thrill. Join the ride.</p>
 
   <div class="form-toggle">
@@ -20,6 +21,7 @@
     <button id="showSignup">Sign Up</button>
   </div>
 
+  <!-- LOGIN -->
   <form id="loginForm" class="auth-form active">
     <h2>Welcome Back</h2>
 
@@ -37,6 +39,7 @@
     </p>
   </form>
 
+  <!-- SIGNUP -->
   <form id="signupForm" class="auth-form">
     <h2>Join the Adventure</h2>
 
@@ -61,10 +64,16 @@
     </p>
   </form>
 
+ 
+
 </div>
+ <!-- BACK BUTTON -->
+  <a href="../index/index.html" class="back-home">
+    <i class="fas fa-arrow-left"></i> Back to Home
+  </a>
 
 <script>
-    const loginForm = document.getElementById("loginForm");
+  const loginForm = document.getElementById("loginForm");
 const signupForm = document.getElementById("signupForm");
 
 const showLogin = document.getElementById("showLogin");
@@ -104,6 +113,7 @@ document.querySelectorAll(".toggle-password").forEach(icon => {
   };
 });
 
+/* PASSWORD STRENGTH */
 const password = document.getElementById("signupPassword");
 const strength = document.getElementById("strength");
 
@@ -119,15 +129,7 @@ password.addEventListener("input", () => {
     strength.classList.add("strong");
   }
 });
-
-const themeBtn = document.getElementById("themeBtn");
-
-themeBtn.onclick = () => {
-  document.body.classList.toggle("dark");
-
-  themeBtn.textContent =
-    document.body.classList.contains("dark") ? "☀️" : "🌙";
-};
 </script>
-    </body>
-    </html>
+
+</body>
+</html>

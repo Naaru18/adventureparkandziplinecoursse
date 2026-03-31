@@ -342,6 +342,43 @@ body {
   background: var(--ez-hover-bg);
 }
 
+.ez-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  background: #3b82f6;
+  color: #fff;
+
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.ez-action-btn.outline {
+  background: transparent;
+  color: var(--ez-fg);
+  border: 1px solid var(--ez-fg);
+}
+
+/* HOVER */
+.ez-action-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.ez-action-btn.outline:hover {
+  background: var(--ez-accent-light);
+  color: var(--ez-accent);
+  border-color: var(--ez-accent);
+}
+
 
 .ez-icon-sun { display: none; }
 .ez-icon-moon { display: block; }
@@ -360,8 +397,8 @@ body {
   border-radius: 9px;
   cursor: pointer;
   padding: 0 10px;
-  transition: background 0.18s;
 }
+
 .ez-menu-btn:hover { background: var(--ez-hover-bg); }
 .ez-menu-btn span {
   display: block;
@@ -611,27 +648,33 @@ body.dark .ez-menu-btn span{
     height: 62px;
     padding: 0 1rem;
   }
-
-  
-  .ez-links-wrap {
+.ez-links-wrap {
     display: none;
   }
 
-  
-  .ez-menu-btn {
-    display: flex;
-  }
-
-  
   .ez-icon-btn {
     display: none;
   }
 
-  
   .ez-theme-btn {
     display: flex;
   }
 
+  .ez-menu-btn {
+    display: flex;
+  }
+ 
+  .ez-icon-btn {
+    display: none;
+  }
+
+  .ez-theme-btn {
+    display: flex;
+  }
+
+  .ez-action-btn{
+    display: none;
+  }
   
   .ez-actions {
     gap: 0.5rem;
@@ -650,6 +693,9 @@ body.dark .ez-menu-btn span{
 
   .ez-logo-sub {
     font-size: 0.55rem;
+  }
+  .ez-actions {
+    gap: 0.3rem;
   }
 
   
@@ -681,7 +727,10 @@ body.dark .ez-menu-btn span{
   .ez-drawer {
     display: block;
   }
-
+  .ez-action-btn {
+    display: none;
+  }
+ 
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -690,17 +739,21 @@ body.dark .ez-menu-btn span{
     padding: 0 2rem;
   }
 
-  .ez-links-wrap {
-    display: flex;
-  }
-
-  .ez-menu-btn {
-    display: none;
-  }
 
   .ez-link {
     font-size: 0.85rem;
     padding: 0.45rem 0.7rem;
+  }
+   .ez-menu-btn {
+    display: none !important;
+  }
+
+  .ez-links-wrap {
+    display: flex;
+  }
+
+  .ez-action-btn {
+    display: flex;
   }
 
 }
