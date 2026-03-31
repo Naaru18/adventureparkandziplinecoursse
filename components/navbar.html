@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoZip Adventure</title>
+
+  <link rel="stylesheet" href="../css/navbar.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="ez-nav-root">
+  <div class="ez-nav-container">
+
+    <div class="ez-brand">
+      <span class="ez-logo-icon"><i class="fas fa-leaf"></i></span>
+      <div class="ez-logo-text">
+        <span class="ez-logo-main">EcoZip</span>
+        <span class="ez-logo-sub">Adventure</span>
+      </div>
+    </div>
+
+    <div class="ez-links-wrap" id="ezLinksWrap">
+
+      <div class="ez-item ez-has-sub">
+        <a href="../index/index.html" class="ez-link">
+          Home <i class="fas fa-chevron-down ez-caret"></i>
+        </a>
+        <div class="ez-submenu">
+          <a href="../home2/home2.html" class="ez-sub-link">
+            <span class="ez-sub-icon"><i class="fas fa-star"></i></span>
+            <span class="ez-sub-text">
+              <strong>Home 2</strong>
+              <small>Alternative layout</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="ez-item">
+        <a href="../about/about.html" class="ez-link">About</a>
+      </div>
+      
+
+      <div class="ez-item ez-has-sub">
+        <a href="../services/services.html" class="ez-link">
+  Services <i class="fas fa-chevron-down ez-caret"></i>
+</a>
+        <div class="ez-submenu">
+          <a href="../sdetails/servicedetails1.html" class="ez-sub-link">
+            <span class="ez-sub-icon"><i class="fas fa-person-falling"></i></span>
+            <span class="ez-sub-text">
+              <strong>Zipline Adventure</strong>
+              <small>Fly through the canopy</small>
+            </span>
+          </a>
+          <a href="../sdetails/servicedetails2.html" class="ez-sub-link">
+            <span class="ez-sub-icon"><i class="fas fa-grip-lines"></i></span>
+            <span class="ez-sub-text">
+              <strong>Rope & Obstacle</strong>
+              <small>Challenge your limits</small>
+            </span>
+          </a>
+          <a href="../sdetails/servicedetails3.html" class="ez-sub-link">
+            <span class="ez-sub-icon"><i class="fas fa-mountain-sun"></i></span>
+            <span class="ez-sub-text">
+              <strong>Trekking</strong>
+              <small>Explore scenic trails</small>
+            </span>
+          </a>
+          <a href="../sdetails/servicedetails4.html" class="ez-sub-link">
+            <span class="ez-sub-icon"><i class="fas fa-children"></i></span>
+            <span class="ez-sub-text">
+              <strong>Kids & Family</strong>
+              <small>Fun for all ages</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="ez-item">
+        <a href="../blog/blog.html" class="ez-link">Blogs</a>
+      </div>
+
+      <div class="ez-item">
+        <a href="../contact/contact.html" class="ez-link">Contact</a>
+      </div>
+
+    </div>
+    <div class="ez-actions">
+      <a href="../login/login.html" class="ez-icon-btn" title="Login">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      <a href="../dashboard/dashboard.html" class="ez-icon-btn" title="Dashboard">
+        <i class="fa-solid fa-gauge"></i>
+      </a>
+      <button class="ez-theme-btn" id="ezThemeBtn" aria-label="Toggle theme">
+        <i class="fas fa-moon ez-icon-moon"></i>
+        <i class="fas fa-sun ez-icon-sun"></i>
+      </button>
+      <button class="ez-menu-btn" id="ezMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<div class="ez-drawer" id="ezDrawer">
+  <div class="ez-drawer-inner">
+
+    <div class="ez-mob-item">
+      <button class="ez-mob-link ez-mob-has-sub" data-target="mob-home">
+        <span><i class="fas fa-house"></i> Home</span>
+        <i class="fas fa-chevron-down ez-mob-caret"></i>
+      </button>
+      <div class="ez-mob-sub" id="mob-home">
+        <a href="../index/index.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Home Classic</a>
+        <a href="../home2/home2.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Home 2</a>
+      </div>
+    </div>
+
+    <div class="ez-mob-item">
+      <a href="../about/about.html" class="ez-mob-link">
+        <span><i class="fas fa-circle-info"></i> About</span>
+      </a>
+    </div>
+
+    <div class="ez-mob-item">
+      <button class="ez-mob-link ez-mob-has-sub" data-target="mob-services">
+        <span><i class="fas fa-briefcase"></i> Services</span>
+        <i class="fas fa-chevron-down ez-mob-caret"></i>
+      </button>
+      <div class="ez-mob-sub" id="mob-services">
+        <a href="../sdetails/servicedetails1.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Zipline Adventure</a>
+        <a href="../sdetails/servicedetails2.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Rope & Obstacle</a>
+        <a href="../sdetails/servicedetails3.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Trekking</a>
+        <a href="../sdetails/servicedetails4.html" class="ez-mob-sub-link"><i class="fas fa-circle-dot"></i> Kids & Family</a>
+      </div>
+    </div>
+
+    
+       <div class="ez-mob-item">
+      <a href="../blog/blog.html" class="ez-mob-link">
+        <span><i class="fas fa-blog"></i>Blogs</span>
+      </a>
+    </div>
+
+    <div class="ez-mob-item">
+      <a href="../contact/contact.html" class="ez-mob-link">
+        <span><i class="fas fa-envelope"></i> Contact</span>
+      </a>
+    </div>
+   
+
+    <div class="ez-mob-actions">
+      <a href="../login/login.html" class="ez-mob-action-btn">
+        <i class="fa-solid fa-user"></i> Login
+      </a>
+      <a href="../dashboard/dashboard.html" class="ez-mob-action-btn">
+        <i class="fa-solid fa-gauge"></i> Dashboard
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="ez-overlay" id="ezOverlay"></div>
+<script src="../js/components.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecozip Contact</title>
+     <link rel="stylesheet" href="../contact/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="header"></div>
+     <section class="contact-banner">
+  <div class="banner-overlay"></div>
+
+  <div class="banner-container">
+    <span class="banner-tag">Get in Touch</span>
+
+    <h1>
+      Let’s Plan Your <span class="highlight">Adventure</span>
+    </h1>
+
+    <p>
+      Have questions about bookings, safety, or group events?  
+      Our team is ready to assist you anytime.
+    </p>
+
+    <div class="banner-actions">
+      <a href="../contact/contact.html">
+      <button class="primary">Contact Us →</button></a>
+      <a href="../home2/home2.html#price"><button class="secondary">View Packages</button></a>
+    </div>
+  </div>
+</section>
+<script>
+    document.querySelector(".primary").addEventListener("click", () => {
+  document.querySelector(".contact-main")?.scrollIntoView({
+    behavior: "smooth"
+  });
+});
+</script>
+<section class="reach-pro">
+  <div class="reach-pro-wrap">
+
+    <div class="reach-card form-card">
+      <h2>Send a Message</h2>
+
+      <form class="reach-form-pro">
+        <div class="input-group">
+          <input type="text" required>
+          <label>First Name</label>
+        </div>
+        <div class="input-group">
+          <input type="text" required>
+          <label>Last Name</label>
+        </div>
+
+        <div class="input-group">
+          <input type="email" required>
+          <label>Email Address</label>
+        </div>
+
+        <div class="input-group">
+  <input type="tel" required>
+  <label>Phone Number</label>
+</div>
+
+        
+
+        <div class="input-group">
+          <textarea rows="4" required></textarea>
+          <label>Your Message</label>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Send Message →
+        </button>
+      </form>
+    </div>
+
+    <div class="reach-card info-card">
+      <h2>Contact Details</h2>
+
+      <div class="info-grid">
+
+        <div class="info-item">
+          <div class="icon">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Adventure Park, Hyderabad</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <p>+91 98765 43210</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">✉️</div>
+          <div>
+            <h4>Email</h4>
+            <p>info@adventurepark.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">🕒</div>
+          <div>
+            <h4>Working Hours</h4>
+            <p>12:00 PM – 12:00 AM</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-actions">
+        <button class="call">Call Now</button>
+        <button class="book">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<script>
+    document.querySelector(".reach-form-pro").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const btn = this.querySelector(".submit-btn");
+  btn.innerText = "Sending...";
+
+  setTimeout(() => {
+    btn.innerText = "Message Sent ✓";
+    btn.style.background = "#3b82f6";
+  }, 1000);
+
+  this.reset();
+});
+</script>
+
+<section class="xp-map-section">
+  <div class="xp-map-wrapper">
+    <iframe 
+      src="https://maps.google.com/maps?q=Hyderabad%20Telangana&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<section class="faq-pro">
+  <div class="faq-container">
+
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <div class="faq-box">
+
+      <div class="faq-item-pro active">
+        <div class="faq-question">
+          <h4>Is zipline safe?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, all activities are conducted with certified safety gear and trained instructors ensuring maximum safety.</p>
+        </div>
+      </div>
+
+      <div class="faq-item-pro">
+        <div class="faq-question">
+          <h4>What is the age limit?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Participants above 10 years can enjoy zipline activities with proper supervision.</p>
+        </div>
+      </div>
+
+      <div class="faq-item-pro">
+        <div class="faq-question">
+          <h4>Do I need prior experience?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>No prior experience is needed. Our professional team will guide you step by step.</p>
+        </div>
+      </div>
+
+      <div class="faq-item-pro">
+        <div class="faq-question">
+          <h4>What should I wear?</h4>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Wear comfortable clothes and sports shoes. Avoid loose accessories.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+    const faqItems = document.querySelectorAll(".faq-item-pro");
+
+faqItems.forEach(item => {
+  item.querySelector(".faq-question").addEventListener("click", () => {
+
+
+    faqItems.forEach(i => {
+      if(i !== item) i.classList.remove("active");
+    });
+
+
+    item.classList.toggle("active");
+  });
+});
+</script>
+  
+     <div id="footer"></div>
+  <script src="../js/components.js"></script>
+    
+</body>
+</html>

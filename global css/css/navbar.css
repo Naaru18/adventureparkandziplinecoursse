@@ -1,0 +1,194 @@
+
+.navbar * {
+  box-sizing: border-box;
+}
+
+
+body {
+  --bg: #ffffff;
+  --text: #000;
+  --border: #ddd;
+
+  margin: 0;
+}
+
+body.dark {
+  --bg: #000000;
+  --text: #fff;
+  --border: #333;
+}
+
+.navbar {
+  position: fixed;   
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 9999;
+
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.zip { color: #FF6A00; }
+.adv { color: #3b82f6; }
+
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 15px;
+  position: relative;
+}
+
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+
+.arrow {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+
+  background: var(--bg);
+  border: 1px solid var(--border);
+
+  border-radius: 6px;
+  overflow: hidden;
+
+  display: none;
+  min-width: 160px;
+
+  z-index: 10000; 
+}
+
+
+.dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.dropdown a:hover {
+  background: #eee;
+}
+
+
+@media (min-width: 640px) {
+  .nav-item:hover .dropdown {
+    display: block;
+  }
+}
+
+
+.right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.icon {
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  background: #eee;
+}
+
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+
+@media (max-width: 639px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    gap: 15px;
+
+    display: none;
+    background: var(--bg);
+    padding: 20px;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  
+  .dropdown {
+    position: static;
+    border: none;
+    margin-left: 10px;
+  }
+
+  .nav-item.active .dropdown {
+    display: block;
+  }
+}

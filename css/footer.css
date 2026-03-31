@@ -1,0 +1,185 @@
+
+:root {
+  --primary: #e66a00;
+  --secondary: #3b82f6;
+
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --card: #f9fafb;
+}
+
+
+body.dark {
+  --bg: #111111;
+  --text: #ffffff;
+  --muted: #d1d5db;
+  --card: #1a1a1a;
+  --border: #2a2a2a;
+}
+
+
+.footer {
+  background: #cdf5f9;
+  padding: 60px 0 20px;
+}
+
+body.dark .footer {
+  background: #1a1a1a;
+}
+
+
+.footer-container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+
+.footer-col h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+
+.footer-brand .ez-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.ez-logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.ez-logo-main {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.ez-logo-sub {
+  font-size: 12px;
+  color: var(--text);
+}
+
+
+.footer-desc {
+  margin-top: 10px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+
+.contact li {
+  color: var(--text);
+}
+
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 38px;
+  height: 38px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--text);
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+
+.footer-bottom {
+  border-top: 1px solid var(--text);;
+  padding-top: 20px;
+  text-align: center;
+  color: var(--text);
+  width: 85%;              
+  margin: 40px auto 0;     
+}
+
+
+
+@media (max-width: 639px) {
+  .footer-bottom {
+    width: 90%;              
+    margin: 30px auto 0;
+    padding-top: 15px;
+    font-size: 13px;
+  }
+}
+
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .footer-bottom {
+    width: 85%;
+    margin: 35px auto 0;
+    padding-top: 18px;
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .footer-bottom {
+    width: 85%;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .footer-bottom {
+    width: 85%;
+    margin: 45px auto 0;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+}

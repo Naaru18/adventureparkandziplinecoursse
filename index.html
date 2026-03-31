@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecozip Home</title>
+    <link rel="stylesheet" href="../index/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+   <section class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>Ultimate Adventure Experience</h1>
+
+    <p>
+      Feel the thrill of ziplining, trekking, and outdoor adventures with complete safety and expert guidance.
+    </p>
+
+    <div class="buttons">
+      <a href="../services/services.html" class="btn primary">Explore Activities</a>
+      <a href="../contact/contact.html" class="btn secondary">Book Now</a>
+    </div>
+  </div>
+
+</section>
+<section class="about">
+  <div class="about-container">
+
+    <div class="about-images">
+      <img src="../Images/zip1.jpg" class="img1" alt="">
+      <img src="../Images/zip2.jpg" class="img2" alt="">
+    </div>
+
+    <div class="about-content">
+      <h5>EcoZip Adventures</h5>
+      <h2>Experience the thrill of nature from above</h2>
+
+      <p>
+        EcoZip Adventures brings you closer to nature with exciting zipline
+        experiences and outdoor activities designed for thrill and safety.
+        Surrounded by lush landscapes, our courses are crafted to give you
+        unforgettable moments above the ground.
+      </p>
+
+      <p>
+        Whether you're a first-time adventurer or a thrill seeker, we provide
+        safe, eco-friendly, and professionally guided experiences that blend
+        adrenaline with nature.
+      </p>
+
+      <div class="about-features">
+
+        <div class="feature">
+          
+          <div>
+            <h4>Eco-Friendly Adventures</h4>
+            <p>Designed to protect and respect nature.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+         
+          <div>
+            <h4>Safety First</h4>
+            <p>Certified equipment and trained guides.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="booking">
+  <div class="container">
+    <h2>Adventure Deals Just For You</h2>
+    <p>Explore EcoZip adventures across breathtaking locations</p>
+
+    <div class="card-grid">
+
+      <div class="card">
+        <img src="../Images/adventure1.jpg" alt="">
+        <div class="card-content">
+          <h3>New Zealand Zipline</h3>
+          <p>EcoZip Waiheke Island</p>
+          <div class="info">
+            <span>🌿 Eco Tour</span>
+            <span>⭐ 4.8</span>
+            <span>⏱ 3 hrs</span>
+          </div>
+          <div class="price-row">
+            <h4>$120</h4>
+            <a href="../home2/home2.html#price">
+  <button>Book Now</button>
+</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../Images/adventure2.jpg" alt="">
+        <div class="card-content">
+          <h3>Rainforest Zipline</h3>
+          <p>Costa Rica Eco Adventure</p>
+          <div class="info">
+            <span>🌿 Eco Tour</span>
+            <span>⭐ 4.7</span>
+            <span>⏱ 2.5 hrs</span>
+          </div>
+          <div class="price-row">
+            <h4>$95</h4>
+           <a href="../home2/home2.html#price">
+  <button>Book Now</button>
+</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../Images/adventure3.jpg" alt="">
+        <div class="card-content">
+          <h3>Mountain Glide</h3>
+          <p>Swiss Alps Zip Experience</p>
+          <div class="info">
+            <span>🌿 Eco Tour</span>
+            <span>⭐ 4.9</span>
+            <span>⏱ 4 hrs</span>
+          </div>
+          <div class="price-row">
+            <h4>$180</h4>
+            <a href="../home2/home2.html#price">
+  <button>Book Now</button>
+</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="section">
+  <h1>Why Choose Our Adventure Park?</h1>
+  <p>
+    Experience thrilling zipline rides and outdoor adventures with safety,
+    excitement, and unforgettable memories.
+  </p>
+
+  <div class="grid">
+
+    <div class="side">
+      <div class="item">
+        <h3>🌲 Expert Guides</h3>
+        <p>Certified professionals ensure a safe and exciting adventure every time.</p>
+      </div>
+
+      <div class="item">
+        <h3>⚡ Fast Access</h3>
+        <p>Minimal waiting so you can enjoy more adventure and less delay.</p>
+      </div>
+    </div>
+
+    <div class="center-img">
+      <img src="../Images/whych.jpg" />
+    </div>
+
+    <div class="side">
+      <div class="item">
+        <h3>💰 Affordable Fun</h3>
+        <p>Adventure-packed experiences at prices everyone can enjoy.</p>
+      </div>
+
+      <div class="item">
+        <h3>🎯 Full Adventure Zone</h3>
+        <p>Zipline, rope courses, climbing walls — all in one place.</p>
+      </div>
+    </div>
+
+  </div>
+<a href="../home2/home2.html#price">
+  <button class="btn">Book Your Adventure</button>
+</a>
+</section>
+
+<script>
+
+const items = document.querySelectorAll('.item');
+
+function showItems() {
+  const trigger = window.innerHeight * 0.85;
+  items.forEach(item => {
+    const top = item.getBoundingClientRect().top;
+    if (top < trigger) {
+      item.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showItems);
+window.addEventListener('load', showItems);
+</script>
+<section class="section how">
+  <h1>How It Works</h1>
+  <p>Start your adventure in just 3 simple steps</p>
+
+  <div class="steps">
+
+    <div class="progress-line">
+      <span class="progress-fill"></span>
+    </div>
+
+    <div class="step active" data-step="0">
+      <div class="circle">1</div>
+      <h3>Choose Activity</h3>
+      <p>Explore and pick your favorite adventure.</p>
+    </div>
+
+    <div class="step" data-step="1">
+      <div class="circle">2</div>
+      <h3>Book Slot</h3>
+      <p>Select date and time instantly.</p>
+    </div>
+
+    <div class="step" data-step="2">
+      <div class="circle">3</div>
+      <h3>Visit & Enjoy</h3>
+      <p>Arrive and experience the thrill.</p>
+    </div>
+
+  </div>
+</section>
+<script>
+const steps = document.querySelectorAll('.step');
+const progress = document.querySelector('.progress-fill');
+
+let current = 0;
+
+function autoSteps() {
+  steps.forEach((step, i) => {
+    setTimeout(() => {
+      step.classList.add('show');
+    }, i * 300);
+  });
+
+  setInterval(() => {
+    setActive((current + 1) % steps.length);
+  }, 3000);
+}
+
+function setActive(index) {
+  steps.forEach(s => s.classList.remove('active'));
+  steps[index].classList.add('active');
+
+  current = index;
+  progress.style.width = ((index + 1) / steps.length) * 100 + "%";
+}
+
+
+steps.forEach((step, i) => {
+  step.addEventListener('click', () => {
+    setActive(i);
+  });
+});
+
+window.addEventListener('load', () => {
+  autoSteps();
+  setActive(0);
+});
+</script>
+<section class="testimonials" id="testimonials">
+
+  <div class="testimonials-header">
+    <h2>Our Customers <span>Love Us</span></h2>
+    <p>Real experiences from our adventure park visitors</p>
+  </div>
+
+  <div class="testimonials-grid">
+
+    
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="text">
+        The zipline experience here was absolutely incredible! The safety measures 
+        and staff support made us feel confident and excited throughout.
+      </p>
+      <div class="avatar" style="background-image:url('https://i.pravatar.cc/100?img=1')"></div>
+      <h3 class="name">Rahul Verma</h3>
+      <span class="role">Adventure Lover</span>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="text">
+        Perfect weekend getaway! The activities are fun, challenging, and well organized. 
+        Highly recommended for groups and friends.
+      </p>
+      <div class="avatar" style="background-image:url('https://i.pravatar.cc/100?img=2')"></div>
+      <h3 class="name">Anjali Sharma</h3>
+      <span class="role">Student</span>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="text">
+        Amazing views and thrilling rides. Everything was smooth, safe, and exciting. 
+        Definitely one of the best adventure parks I’ve visited.
+      </p>
+      <div class="avatar" style="background-image:url('https://i.pravatar.cc/100?img=3')"></div>
+      <h3 class="name">Kiran Kumar</h3>
+      <span class="role">Traveler</span>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="text">
+        Loved the experience! Staff were very supportive and guided us well. 
+        The place is perfect for both adventure and relaxation.
+      </p>
+      <div class="avatar" style="background-image:url('https://i.pravatar.cc/100?img=4')"></div>
+      <h3 class="name">Sneha Reddy</h3>
+      <span class="role">Photographer</span>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="text">
+        A must-visit place for families and friends. Safe, fun, and full of 
+        exciting activities. We had an unforgettable time here.
+      </p>
+      <div class="avatar" style="background-image:url('https://i.pravatar.cc/100?img=5')"></div>
+      <h3 class="name">Arjun Patel</h3>
+      <span class="role">Engineer</span>
+    </div>
+    <div class="testimonial-card">
+  <div class="stars">★★★★★</div>
+  <p class="text">
+    Safety measures were top-notch. We felt secure while enjoying all the activities. Highly recommended!
+  </p>
+  <div class="avatar" style="background-image:url('https://i.pravatar.cc/100?img=52')"></div>
+  <h3 class="name">Naveen Kumar</h3>
+  <span class="role">Engineer</span>
+</div>
+
+  </div>
+
+</section>
+<section class="faq">
+
+  <div class="faq-container">
+
+    <div class="faq-header">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know about our zipline and adventure experiences</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <div class="faq-question">
+          <span>Is zipline safe for beginners?</span>
+          <span class="icon">▲</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Yes, our zipline experiences are designed for all skill levels. We use certified
+            safety equipment and provide trained guides to ensure a secure and enjoyable ride.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is the minimum age for adventure activities?</span>
+          <span class="icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Most activities are suitable for participants aged 10 and above. Some advanced
+            courses may have additional height and weight requirements.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do I need prior experience?</span>
+          <span class="icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            No prior experience is required. Our team provides complete instructions and
+            safety briefings before every activity.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Are the activities eco-friendly?</span>
+          <span class="icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Yes, EcoZip Adventures follows eco-friendly practices and ensures minimal
+            environmental impact while delivering thrilling experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I book group or corporate events?</span>
+          <span class="icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            Absolutely! We offer customized group packages for schools, corporates, and
+            events with special discounts and guided sessions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<script>
+  document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+    const item = q.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(el => {
+      if (el !== item) el.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>
+<section class="cta">
+
+  <div class="cta-glow glow1"></div>
+  <div class="cta-glow glow2"></div>
+
+  <div class="cta-container">
+
+    <h2>Ready for Your Next Adventure?</h2>
+
+    <p>
+      Experience thrilling zipline rides and unforgettable outdoor adventures.
+      Book your journey today and feel the adrenaline.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="../contact/contact.html">
+      <button class="btn-primary">Book Now</button></a>
+      <a href="../services/services.html"></a>
+      <button class="btn-secondary">Explore Activities</button>
+    </div>
+
+  </div>
+
+</section>
+ <div id="footer"></div>
+  <script src="../js/components.js"></script>
+</body>
+</html>

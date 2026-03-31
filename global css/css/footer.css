@@ -1,0 +1,326 @@
+/* =========================================
+   FOOTER BASE
+========================================= */
+.footer {
+  padding: 60px 20px 20px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  background-color: aliceblue;
+}
+body.dark .footer{
+    background-color: rgb(12, 9, 9);
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+.footer-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* =========================================
+   LOGO & TEXT
+========================================= */
+.footer-text {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* =========================================
+   FOOTER HEADINGS (HIGHLIGHTED)
+========================================= */
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  position: relative;
+  display: inline-block;
+
+  
+  background: linear-gradient(90deg, var(--blue), var(--orange));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.footer-col h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 40px;
+  height: 2px;
+
+  background: var(--orange);
+  border-radius: 2px;
+}
+body.dark .footer-col h4::after {
+  background: var(--blue);
+}
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: var(--orange);
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+.contact li {
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+.newsletter {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.newsletter button {
+  padding: 10px 16px;
+  border: none;
+  background: var(--orange);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newsletter button:hover {
+  background: #e65c00;
+}
+
+/* =========================================
+   DIVIDER LINE
+========================================= */
+.footer-bottom {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 40px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(0,0,0,0.1); 
+
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+body.dark .footer-text {
+  color: #aaa;
+}
+
+body.dark .footer-bottom {
+  color: #aaa;
+  border-top: 1px solid rgba(255,255,255,0.1); 
+}
+
+body.dark .newsletter {
+  background: rgba(255,255,255,0.1);
+}
+
+body.dark .newsletter input {
+  color: #fff;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+@media (max-width: 640px) {
+
+  .footer {
+    padding: 50px 15px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer-text {
+    max-width: 300px;
+    margin: 10px auto 0;
+  }
+
+  .newsletter {
+    max-width: 300px;
+    margin: 15px auto 0;
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+}
+/* =========================================
+   📱 MOBILE (<640px)
+========================================= */
+@media (max-width: 639px) {
+
+  .footer {
+    padding: 50px 15px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-col {
+    align-items: center;
+  }
+
+  .footer-text {
+    max-width: 300px;
+    margin: 10px auto 0;
+  }
+
+  .footer-col h4 {
+    display: inline-block;
+  }
+
+  .footer-col h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .newsletter {
+    max-width: 300px;
+    margin: 15px auto 0;
+  }
+
+  .footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+}
+
+
+/* =========================================
+   📲 TABLET (640px – 1024px)
+========================================= */
+@media (min-width: 640px) and (max-width: 1024px) {
+
+  .footer {
+    padding: 60px 20px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .footer-text {
+    max-width: 400px;
+  }
+
+  .newsletter {
+    max-width: 320px;
+  }
+
+  .footer-bottom {
+    margin-top: 35px;
+  }
+}
+
+
+/* =========================================
+   💻 DESKTOP (1024px – 1280px)
+========================================= */
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .footer {
+    padding: 70px 30px 20px;
+  }
+
+  .footer-text {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    margin-top: 40px;
+  }
+}
+
+
+/* =========================================
+   🖥 LARGE SCREENS (>1280px)
+========================================= */
+@media (min-width: 1281px) {
+
+  .footer {
+    padding: 80px 40px 25px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    gap: 50px;
+  }
+
+  .footer-col h4 {
+    font-size: 18px;
+  }
+
+  .footer-text {
+    font-size: 15px;
+  }
+
+  .footer-bottom {
+    font-size: 14px;
+  }
+}
