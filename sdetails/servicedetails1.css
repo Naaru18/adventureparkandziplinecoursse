@@ -112,8 +112,8 @@ body.dark .banner-overlay {
 
 @media (max-width: 639px) {
   .service-banner {
-    min-height: 75vh;
-    padding: 120px 15px 80px;
+    min-height: 85vh;
+    padding: 150px 15px 100px;
   }
 
   .banner-content h1 {
@@ -827,9 +827,14 @@ body.dark p {
     grid-template-columns: 1fr;
   }
 
-  .big-card {
+.big-card {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start; /* moves all content to left */
+    text-align: left;
+  }
+
+  .big-card .icon {
+    align-self: flex-start; /* ensures icon stays left */
   }
 
   .right {

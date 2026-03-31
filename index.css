@@ -9,12 +9,13 @@ body {
 
 .hero {
   position: relative;
-  height: 65vh;
   background: url("../Images/herobg.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 85vh;
+  padding: 200px 20px 120px;
 }
 
 .hero .overlay {
@@ -99,8 +100,8 @@ body.dark .btn.secondary:hover {
 }
 @media (max-width: 640px) {
   .hero {
-    height: auto;
-    padding: 120px 20px 80px 20px; 
+    min-height:75vh;
+    padding: 160px 20px 100px 20px; 
   }
 
   .hero .content {
