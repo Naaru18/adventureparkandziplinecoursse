@@ -1,11 +1,4 @@
-/* ═══════════════════════════════════════════════════════
-   EcoZip Adventure — navbar.css
-   Breakpoints:
-     Mobile  : < 640px
-     Tablet  : 640px – 1024px
-     Desktop : 1024px – 1280px
-     Large   : > 1280px
-═══════════════════════════════════════════════════════ */
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap');
@@ -65,10 +58,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
-/* ════════════════════════════════════════════════════════
-   NAVBAR ROOT
-════════════════════════════════════════════════════════ */
 .ez-nav-root {
   top: 0;
   z-index: 1000;
@@ -95,9 +84,6 @@ body {
   gap: 1rem;
 }
 
-/* ════════════════════════════════════════════════════════
-   BRAND / LOGO
-════════════════════════════════════════════════════════ */
 .ez-brand {
   display: flex;
   align-items: center;
@@ -145,9 +131,6 @@ body {
   text-transform: uppercase;
 }
 
-/* ════════════════════════════════════════════════════════
-   DESKTOP NAV LINKS
-════════════════════════════════════════════════════════ */
 .ez-links-wrap {
   display: flex;
   align-items: center;
@@ -216,9 +199,6 @@ body {
   border-radius: 2px;
 }
 
-/* ════════════════════════════════════════════════════════
-   DESKTOP DROPDOWN
-════════════════════════════════════════════════════════ */
 .ez-submenu {
   position: absolute;
   top: calc(100% + 12px);
@@ -313,9 +293,6 @@ body {
   margin: 0.35rem 0.5rem;
 }
 
-/* ════════════════════════════════════════════════════════
-   RIGHT ACTIONS
-════════════════════════════════════════════════════════ */
 .ez-actions {
   display: flex;
   align-items: center;
@@ -371,9 +348,6 @@ body {
 [data-theme="dark"] .ez-icon-sun  { display: block; }
 [data-theme="dark"] .ez-icon-moon { display: none;  }
 
-/* ════════════════════════════════════════════════════════
-   HAMBURGER BUTTON
-════════════════════════════════════════════════════════ */
 .ez-menu-btn {
   display: none;
   flex-direction: column;
@@ -389,14 +363,19 @@ body {
   transition: background 0.18s;
 }
 .ez-menu-btn:hover { background: var(--ez-hover-bg); }
-
 .ez-menu-btn span {
   display: block;
-  height: 1.8px;
+  width: 100%;  
+  height: 2px;
   background: var(--ez-fg);
   border-radius: 2px;
   transition: transform 0.28s ease, opacity 0.2s ease, width 0.22s ease;
+  color:#0d0d0d;
 }
+body.dark .ez-menu-btn span{
+  color:#fff;
+}
+
 .ez-menu-btn span:nth-child(2) { width: 68%; }
 
 
@@ -410,10 +389,6 @@ body {
 .ez-menu-btn.open span:nth-child(3) {
   transform: translateY(-7.3px) rotate(-45deg);
 }
-
-/* ════════════════════════════════════════════════════════
-   MOBILE DRAWER
-════════════════════════════════════════════════════════ */
 .ez-drawer {
  display: block;               
   position: fixed;
@@ -554,9 +529,6 @@ body {
   border-color: var(--ez-accent);
 }
 
-/* ════════════════════════════════════════════════════════
-   OVERLAY
-════════════════════════════════════════════════════════ */
 .ez-overlay {
   display: none;
   position: fixed;
@@ -570,10 +542,6 @@ body {
 .ez-overlay.open {
   opacity: 1;
 }
-
-/* ════════════════════════════════════════════════════════
-   DEMO PAGE BODY
-════════════════════════════════════════════════════════ */
 .ez-demo-body {
   min-height: calc(100vh - 70px);
   display: flex;
