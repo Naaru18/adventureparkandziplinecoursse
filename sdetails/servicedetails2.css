@@ -114,8 +114,8 @@ body.dark .banner-overlay {
 
 @media (max-width: 639px) {
   .service-banner {
-   min-height: 75vh;
-    padding: 120px 15px 80px;
+    min-height: 85vh;
+    padding: 150px 15px 100px;
   }
 
   .banner-content h1 {
@@ -206,17 +206,17 @@ body.dark .description {
 
 .action-btn {
   display: inline-block;
-  background: #e66a00;
+  background: #3b82f6;
   color: #ffffff;
   padding: 14px 26px;
-  border-radius: 30px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: 0.3s;
 }
 
 .action-btn:hover {
-  background: #3b82f6;
+  background: #e66a00;
 }
 
 .review-box {
@@ -829,9 +829,14 @@ body.dark p {
     grid-template-columns: 1fr;
   }
 
-  .big-card {
+.big-card {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start; 
+    text-align: left;
+  }
+
+  .big-card .icon {
+    align-self: flex-start; 
   }
 
   .right {
@@ -942,22 +947,23 @@ body.dark p {
 }
 
 .cta-btn.primary {
-  background: #ffffff;
-  color: #e66a00;
+  background: #3b82f6;
+  color: #fff;
 }
 
 .cta-btn.primary:hover {
-  background: #f3f4f6;
+  background: #3b82f6;
+  color:#fff;
 }
 
 .cta-btn.secondary {
-  background: rgba(255,255,255,0.2);
+ background:#e66a00;
   color: #ffffff;
   backdrop-filter: blur(6px);
 }
 
 .cta-btn.secondary:hover {
-  background: rgba(255,255,255,0.35);
+  background: rgba(109, 154, 210, 0.35);
 }
 
 body.dark .cta-section {

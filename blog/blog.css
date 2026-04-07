@@ -64,6 +64,7 @@ body.dark {
 .banner-content h1 {
   font-size: 38px;
   margin-bottom: 10px;
+  
 }
 body.dark .banner-content h1{
   color:#3b82f6;
@@ -84,7 +85,7 @@ body.dark .banner-content h1{
 .banner-btn {
   display: inline-block;
   padding: 10px 24px;
-  border-radius: 25px;
+  border-radius: 6px;
   background: var(--blue);
   color: #fff;
   text-decoration: none;
@@ -220,10 +221,15 @@ body {
 }
 
 .heading h1 {
-  color: var(--blue);
-  font-size: 2.6rem;
-  margin-top: 15px;
+   font-size: 2.2rem !important;
+  margin-bottom: 30px;
+  color: #3b82f6;
+  text-align: center;
 }
+body.dark .heading h1{
+  color:#e66a00;
+}
+
 
 .heading p {
   margin-top: 12px;
@@ -284,20 +290,25 @@ body {
 .btn {
   margin-top: 25px;
   padding: 14px 26px;
-  background: var(--orange);
-  color: var(--white);
+  background:#3b82f6;
+  color: #fff;
   border: none;
-  border-radius: 30px;
+  border-radius: 6px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.3s ease;
 }
+body.dark .btn{
+  color:#fff;
+  background: #e66a00;
+}
 
 .btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  background: #e66a00;
 }
 
 .meta {
@@ -520,11 +531,11 @@ body {
 .subscribe-form button {
   padding: 15px 26px;
 
-  background: var(--orange);
+  background: #3b82f6;
   color: var(--white);
 
   border: none;
-  border-radius: 30px;
+  border-radius: 6px;
 
   cursor: pointer;
   transition: all 0.3s ease;
@@ -533,9 +544,11 @@ body {
   align-items: center;
   gap: 6px;
 }
-
+body.dark .subscribe-form button{
+  background: #e66a00;
+}
 .subscribe-form button:hover {
-  background: var(--blue);
+  background:#e66a00;
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }

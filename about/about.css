@@ -23,12 +23,7 @@ body {
   text-align: center;
 
   padding: 200px 20px 100px;
-
-  background: linear-gradient(
-    135deg,
-    #00BFFF,
-    #ffffff
-  );
+ background: url("../Images/adventure3.jpg") center/cover no-repeat;
 
   color: #000;
   transition: all 0.3s ease;
@@ -64,82 +59,50 @@ body {
 .banner-inner p {
   font-size: 1rem;
   margin-bottom: 25px;
-  color: #333;
+  color: #000;
   line-height: 1.6;
 }
-.banner-buttons {
+
+.buttons {
   display: flex;
   gap: 15px;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 26px;
-  border-radius: 50px;
-  font-weight: 600;
+  padding: 12px 22px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .btn.primary {
-  background: #000;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background: #FF6A00;
-  transform: translateY(-2px);
-}
-.btn.secondary {
-  border: 2px solid #000;
+  background:#fff;
   color: #000;
-  background: transparent;
 }
 
-.btn.secondary:hover {
-  background: #000;
+.btn.secondary {
   color: #fff;
-}
-body.dark .about-banner-v3 {
-  background: linear-gradient(
-    135deg,
-    #FF6A00,
-    #000000
-  );
-  color: #fff;
-}
-
-body.dark .tag {
-  background: rgba(255,255,255,0.15);
-  color: #fff;
+  background-color: #e66a00;
 }
 
 
-body.dark .banner-inner p {
-  color: #ddd;
-}
-
-body.dark .highlight {
-  color: #00BFFF;
+.btn.primary :hover {
+  background: #3b82f6;
+  color: #000;
 }
 
 body.dark .btn.primary {
-  background: #fff;
-  color: #000;
+  background: #e66a00;
+  color: #fff; 
 }
 
-body.dark .btn.primary:hover {
-  background: #00BFFF;
-  color: #fff;
-}
 body.dark .btn.secondary {
-  border: 2px solid #fff;
   color: #fff;
+  background: #3b82f6;
 }
-
-body.dark .btn.secondary:hover {
+.btn.secondary:hover {
   background: #fff;
   color: #000;
 }
@@ -195,7 +158,7 @@ body.dark .btn.secondary:hover {
   }
 }
 .our-story {
-  padding: 100px 20px;
+  padding: 100px 20px 0px !important;
   background: var(--bg);
   color: var(--text);
 }
@@ -245,13 +208,13 @@ body.dark .tag{
 }
 
 .story-content h2 {
-  font-size: 2.6rem;
-  margin-bottom: 20px;
-  line-height: 1.3;
+  font-size: 32px !important;
+  margin-bottom: 30px;
+  color: #3b82f6;
 }
 
-.highlight {
-  color: var(--orange);
+body.dark .story-content h2{
+  color:#e66a00;
 }
 
 .main-text {
@@ -259,6 +222,7 @@ body.dark .tag{
   margin-bottom: 12px;
   color: var(--text-light);
 }
+
 
 .story-content p {
   font-size: 0.95rem;
@@ -382,7 +346,7 @@ body.dark .tag{
   }
 }
 .activities {
-  padding: 100px 20px;
+  padding: 50px 20px !important;
   background: var(--bg);
   color: var(--text);
 }
@@ -547,7 +511,7 @@ background: rgba(59,130,246,0.08);
 }
 
 .safety {
-  padding: 100px 20px;
+  padding: 50px 20px !important;
   background: var(--bg);
   color: var(--text);
   display: flex;
@@ -575,8 +539,14 @@ background: rgba(59,130,246,0.08);
 }
 
 .section-header h2 {
-  font-size: 2.6rem;
-  margin-bottom: 10px;
+  font-size: 32px !important;
+  margin-bottom: 30px;
+  color: #3b82f6;
+}
+
+
+body.dark .section-header h2{
+  color:#e66a00;
 }
 
 .section-header p {
@@ -733,7 +703,7 @@ body.dark {
 
 .achievements,
 .why-section {
-  padding: 90px 20px;
+  padding: 50px 20px !important;
   background: var(--bg);
   color: var(--text);
   transition: 0.3s;
@@ -756,7 +726,10 @@ body.dark {
 .achieve-left h1 {
   font-size: 3.2rem;
   margin: 10px 0;
-  color: var(--primary); 
+  color: #3b82f6;
+}
+body.dark .achieve-left h1{
+  color:#e66a00;
 }
 
 .sub {
@@ -873,7 +846,11 @@ body.dark {
 .why-left h2 {
   font-size: 2.2rem;
   margin-bottom: 30px;
-  color: var(--secondary); 
+  color: #3b82f6;
+}
+
+body.dark .why-left h2{
+  color:#e66a00;
 }
 
 .why-item {
@@ -948,8 +925,10 @@ body.dark .why-item:hover {
     height: 250px;
   }
 }
+
+
 .gallery {
-  padding: 80px 20px;
+  padding: 50px 20px !important;
 }
 
 .gallery-header {
@@ -960,9 +939,11 @@ body.dark .why-item:hover {
 .gallery-header h2 {
   font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #e66a00;
+  color: #3b82f6;
 }
-
+body.dark .gallery-header h2{
+  color:#e66a00;
+}
 .gallery-header p {
   font-size: 0.95rem;
   opacity: 0.7;
@@ -1065,7 +1046,7 @@ body.dark .gallery{
   }
 }
 .xp-cta-section {
-  padding: 70px 20px;
+  padding: 80px 20px !important;
   display: flex;
   justify-content: center;
   background: #ffffff;

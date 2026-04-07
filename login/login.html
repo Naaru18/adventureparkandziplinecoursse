@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoZip Login</title>
-
-  <link rel="stylesheet" href="login.css">
+  <title>EcoZip Register</title>
+ <link rel="icon" type="image/png" href="../Images/leaf.png" />
+  <link rel="stylesheet" href="../login/login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -13,34 +13,20 @@
 
 <div class="auth-container">
 
-  <h1 class="brand">EcoZip Adventure</h1>
+  
+  <a href="../index/index.html" class="ez-brand">
+    <span class="ez-logo-icon"><i class="fas fa-leaf"></i></span>
+    <div class="ez-logo-text">
+      <span class="ez-logo-main">EcoZip</span>
+      <span class="ez-logo-sub">Adventure</span>
+    </div>
+  </a>
+
   <p class="tagline">Feel the thrill. Join the ride.</p>
 
-  <div class="form-toggle">
-    <button id="showLogin" class="active">Login</button>
-    <button id="showSignup">Sign Up</button>
-  </div>
-
   
-  <form id="loginForm" class="auth-form active">
-    <h2>Welcome Back</h2>
+  <form id="signupForm" class="auth-form active">
 
-    <input type="email" placeholder="Enter your email" required>
-
-    <div class="password-group">
-      <input type="password" id="loginPassword" placeholder="Password" required>
-      <span class="toggle-password" data-target="loginPassword">👁️</span>
-    </div>
-
-    <button type="submit">Start Adventure</button>
-
-    <p class="switch-text">
-      New here? <a href="#" id="switchToSignup">Create Account</a>
-    </p>
-  </form>
-
-  
-  <form id="signupForm" class="auth-form">
     <h2>Join the Adventure</h2>
 
     <input type="text" placeholder="Full Name" required>
@@ -59,60 +45,23 @@
 
     <button type="submit">Join Now</button>
 
+    
     <p class="switch-text">
-      Already a member? <a href="#" id="switchToLogin">Login</a>
+      Already have an account?
+      <a href="../login/register.html">Login here</a>
     </p>
+
   </form>
 
- 
-
 </div>
- 
-  <a href="../index/index.html" class="back-home">
-    <i class="fas fa-arrow-left"></i> Back to Home
-  </a>
 
 <script>
-  const loginForm = document.getElementById("loginForm");
-const signupForm = document.getElementById("signupForm");
-
-const showLogin = document.getElementById("showLogin");
-const showSignup = document.getElementById("showSignup");
-
-const switchToSignup = document.getElementById("switchToSignup");
-const switchToLogin = document.getElementById("switchToLogin");
-
-showLogin.onclick = () => {
-  loginForm.classList.add("active");
-  signupForm.classList.remove("active");
-  showLogin.classList.add("active");
-  showSignup.classList.remove("active");
-};
-
-showSignup.onclick = () => {
-  signupForm.classList.add("active");
-  loginForm.classList.remove("active");
-  showSignup.classList.add("active");
-  showLogin.classList.remove("active");
-};
-
-switchToSignup.onclick = (e) => {
-  e.preventDefault();
-  showSignup.click();
-};
-
-switchToLogin.onclick = (e) => {
-  e.preventDefault();
-  showLogin.click();
-};
-
 document.querySelectorAll(".toggle-password").forEach(icon => {
   icon.onclick = () => {
     const input = document.getElementById(icon.dataset.target);
     input.type = input.type === "password" ? "text" : "password";
   };
 });
-
 
 const password = document.getElementById("signupPassword");
 const strength = document.getElementById("strength");

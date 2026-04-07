@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", loadFooter);
     const drawer   = document.getElementById('ezDrawer');
     const overlay  = document.getElementById('ezOverlay');
     const bpChip   = document.getElementById('ezBpChip');
+    const rtlBtn = document.getElementById("rtlToggle");
 
    
 
@@ -159,7 +160,11 @@ if (themeBtn) {
         closeDrawer();
       }
     });
+  
 
+    rtlBtn.addEventListener("click", () => {
+      document.body.classList.toggle("rtl");
+    });
     
     function updateBpChip() {
       if (!bpChip) return;
@@ -195,6 +200,8 @@ if (themeBtn) {
   }
 
 })();
+
+
 
 
 

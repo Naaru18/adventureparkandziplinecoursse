@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoZip Login</title>
+<link rel="icon" type="image/png" href="../Images/leaf.png" />
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="auth-container">
+
+  
+  <a href="../index/index.html" class="ez-brand">
+    <span class="ez-logo-icon"><i class="fas fa-leaf"></i></span>
+    <div class="ez-logo-text">
+      <span class="ez-logo-main">EcoZip</span>
+      <span class="ez-logo-sub">Adventure</span>
+    </div>
+  </a>
+
+  <p class="tagline">Welcome back. Continue your adventure.</p>
+
+  
+  <form class="auth-form">
+
+    <h2>Login to Your Account</h2>
+
+    <input type="email" placeholder="Enter your email" required>
+
+    <div class="password-group">
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <span class="toggle-password" data-target="loginPassword">👁️</span>
+    </div>
+
+    <button type="submit">Login</button>
+
+    
+    <p class="switch-text">
+      Don’t have an account?
+      <a href="../login/login.html">Register here</a>
+    </p>
+
+  </form>
+
+</div>
+
+<script>
+document.querySelectorAll(".toggle-password").forEach(icon => {
+  icon.onclick = () => {
+    const input = document.getElementById(icon.dataset.target);
+    input.type = input.type === "password" ? "text" : "password";
+  };
+});
+</script>
+
+</body>
+</html>
