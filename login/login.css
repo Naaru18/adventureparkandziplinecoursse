@@ -1,10 +1,26 @@
 :root {
   --blue: #3b82f6;
   --orange: #e66a00;
-  --black: #111;
-  --white: #ffffff;
-  --text: #222;
+
+  --text: #000;
   --muted: #555;
+--login:#000;
+  --card: rgba(255,255,255,0.9);
+  --input: #fff;
+  --border: #ccc;
+
+  --overlay: rgba(255,255,255,0.4);
+}
+
+body.dark {
+  --text: #fff;
+  --muted: #aaa;
+--login:#fff;
+  --card: rgba(0,0,0,0.6);
+  --input: #1e1e1e;
+  --border: #444;
+
+  --overlay: rgba(0,0,0,0.6);
 }
 
 * {
@@ -30,11 +46,10 @@ body {
   max-width: 380px;
   padding: 2rem;
   border-radius: 16px;
-  background: var(--white);
+  background: var(--card); 
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   text-align: center;
 }
-
 
 .tagline {
   font-size: 0.9rem;
@@ -42,7 +57,21 @@ body {
   margin-bottom: 1.2rem;
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
 
+.theme-toggle button {
+  background: var(--blue);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--blue);
+}
 .ez-brand {
   display: flex;
   justify-content: center;
@@ -108,7 +137,33 @@ input {
 input::placeholder {
   color: #666;
 }
+input {
+  background: var(--input);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
 
+input::placeholder {
+  color: var(--muted);
+}
+body {
+  position: relative;
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  z-index: 0;
+}
+
+
+.auth-container {
+  position: relative;
+  z-index: 1;
+}
 
 button {
   width: 100%;
@@ -149,12 +204,11 @@ button:hover {
 .weak { background: var(--orange); width: 30%; }
 .medium { background: var(--blue); width: 60%; }
 .strong { background: var(--black); width: 100%; }
-
-
 .switch-text {
   text-align: center;
   font-size: 14px;
   margin-top: 10px;
+  color: var(--muted);   
 }
 
 .switch-text a {
@@ -162,7 +216,70 @@ button:hover {
   text-decoration: none;
   font-weight: 600;
 }
-
 .switch-text a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 360px) {
+
+  .auth-container {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+
+  .ez-logo-main {
+    font-size: 1.1rem;
+  }
+
+  .ez-logo-sub {
+    font-size: 0.55rem;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+  }
+
+}
+
+@media (min-width: 361px) and (max-width: 768px) {
+
+  .auth-container {
+    max-width: 420px;
+    padding: 2rem;
+  }
+
+  .ez-logo-main {
+    font-size: 1.4rem;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .auth-container {
+    max-width: 450px;
+  }
+
+  .theme-toggle {
+    top: 25px;
+    right: 25px;
+  }
+
+}
+
