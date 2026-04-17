@@ -1,28 +1,29 @@
 :root {
-  --blue: #3b82f6;
-  --orange: #e66a00;
+  --primary: #3b82f6;
+  --accent: #e66a00;
 
-  --text: #000;
-  --muted: #555;
---login:#000;
+  --text: #111;
+  --muted: #666;
+
   --card: rgba(255,255,255,0.9);
   --input: #fff;
-  --border: #ccc;
+  --border: #ddd;
 
-  --overlay: rgba(255,255,255,0.4);
+  --overlay: rgba(255,255,255,0.5);
 }
 
 body.dark {
   --text: #fff;
   --muted: #aaa;
---login:#fff;
-  --card: rgba(0,0,0,0.6);
+
+  --card: rgba(0,0,0,0.65);
   --input: #1e1e1e;
   --border: #444;
 
   --overlay: rgba(0,0,0,0.6);
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -30,158 +31,129 @@ body.dark {
   font-family: "Poppins", sans-serif;
 }
 
+/* BODY */
 body {
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
-
+  align-items: center;
   background: url("../Images/loginbg.jpg") center/cover no-repeat;
-}
-
-
-.auth-container {
-  width: 100%;
-  max-width: 380px;
-  padding: 2rem;
-  border-radius: 16px;
-  background: var(--card); 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  text-align: center;
-}
-
-.tagline {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-bottom: 1.2rem;
-}
-
-.theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.theme-toggle button {
-  background: var(--blue);
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 0 10px var(--blue);
-}
-.ez-brand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-
-.ez-logo-icon {
-  width: 42px;
-  height: 42px;
-  background: var(--orange);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.ez-logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.ez-logo-main {
-  font-weight: 900;
-  font-size: 1.3rem;
-  color: var(--text);
-}
-
-.ez-logo-sub {
-  font-weight: 600;
-  font-size: 0.65rem;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-
-.auth-form {
-  display: block;
-}
-
-.auth-form h2 {
-  margin-bottom: 12px;
-  color: var(--text);
-}
-
-
-input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  color: var(--text);
-}
-
-input::placeholder {
-  color: #666;
-}
-input {
-  background: var(--input);
-  border: 1px solid var(--border);
-  color: var(--text);
-}
-
-input::placeholder {
-  color: var(--muted);
-}
-body {
   position: relative;
 }
 
-
+/* OVERLAY */
 body::before {
   content: "";
   position: absolute;
   inset: 0;
   background: var(--overlay);
-  z-index: 0;
+  backdrop-filter: blur(8px);
 }
 
+/* TOP CONTROLS */
+.top-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
 
+.top-controls button {
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+/* CARD */
 .auth-container {
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: none;
-  background: var(--blue);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
+/* BRAND */
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+.logo-icon {
+  width: 45px;
+  height: 45px;
+  background: var(--accent);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
   transition: 0.3s;
 }
 
-button:hover {
-  background: var(--orange);
+.brand:hover .logo-icon {
+  transform: rotate(8deg) scale(1.05);
 }
 
+.brand h1 {
+  font-size: 1.35rem;
+  color: var(--text);
+}
 
+.brand span {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* TAGLINE */
+.tagline {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 10px 0 18px;
+  color: var(--muted);
+}
+
+/* FORM */
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+
+/* INPUT */
+.input-group {
+  margin-bottom: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--input);
+  color: var(--text);
+  transition: 0.25s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  outline: none;
+}
+
+/* PASSWORD */
 .password-group {
   position: relative;
 }
@@ -189,69 +161,197 @@ button:hover {
 .toggle-password {
   position: absolute;
   right: 12px;
-  top: 12px;
+  top: 14px;
   cursor: pointer;
-  font-size: 14px;
+  color: var(--muted);
 }
 
+/* OPTIONS */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
 
-.password-strength {
-  height: 5px;
+/* CHECKBOX */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox span {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
   border-radius: 5px;
-  margin-top: -8px;
+  position: relative;
 }
 
-.weak { background: var(--orange); width: 30%; }
-.medium { background: var(--blue); width: 60%; }
-.strong { background: var(--black); width: 100%; }
+.checkbox input:checked + span {
+  background: var(--primary);
+  border: none;
+}
+
+.checkbox input:checked + span::after {
+  content: "✔";
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  left: 3px;
+  top: -1px;
+}
+
+/* LINKS */
+.options a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* BUTTON */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+}
+
+/* SOCIAL */
+.social {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.social-btn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.google i { color: #db4437; }
+.apple i {
+  color: #000;
+}
+
+/* APPLE ICON IN DARK MODE */
+body.dark .apple i {
+  color: #fff;
+}
+/* PASSWORD ICON POSITION FIX (FOR MULTIPLE FIELDS) */
+.password-group {
+  position: relative;
+}
+
+.password-group .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+/* SWITCH */
 .switch-text {
+  margin-top: 14px;
   text-align: center;
   font-size: 14px;
-  margin-top: 10px;
-  color: var(--muted);   
+  color: var(--muted);
 }
-
-.switch-text a {
-  color: var(--orange);
-  text-decoration: none;
-  font-weight: 600;
-}
-.switch-text a:hover {
-  text-decoration: underline;
-}
-
+/* =========================
+   📱 360px (Small Mobile)
+========================= */
 @media (max-width: 360px) {
 
   .auth-container {
-    padding: 1.5rem 1rem;
+    padding: 1.4rem 1rem;
+    border-radius: 14px;
     max-width: 100%;
   }
 
-  .ez-logo-main {
+  .brand h1 {
     font-size: 1.1rem;
   }
 
-  .ez-logo-sub {
-    font-size: 0.55rem;
+  .brand span {
+    font-size: 0.6rem;
+  }
+
+  .logo-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .tagline {
+    font-size: 0.75rem;
+    margin-bottom: 14px;
   }
 
   input {
+    padding: 11px;
+    font-size: 13px;
+  }
+
+  .btn-primary {
+    padding: 11px;
+    font-size: 14px;
+  }
+
+  .social-btn {
     padding: 10px;
     font-size: 13px;
   }
 
-  button {
-    padding: 10px;
-    font-size: 14px;
+  .options {
+    font-size: 12px;
   }
 
-  .theme-toggle {
+  .switch-text {
+    font-size: 12px;
+  }
+
+  .top-controls {
     top: 10px;
     right: 10px;
   }
 
 }
 
+
+/* =========================
+   📱 768px (Tablet)
+========================= */
 @media (min-width: 361px) and (max-width: 768px) {
 
   .auth-container {
@@ -259,27 +359,50 @@ button:hover {
     padding: 2rem;
   }
 
-  .ez-logo-main {
-    font-size: 1.4rem;
+  .brand h1 {
+    font-size: 1.25rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
   }
 
   input {
     font-size: 14px;
   }
 
+  .btn-primary {
+    font-size: 15px;
+  }
+
+  .social-btn {
+    font-size: 14px;
+  }
+
 }
 
 
+/* =========================
+   💻 1024px (Laptop)
+========================= */
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .auth-container {
-    max-width: 450px;
+    max-width: 460px;
+    padding: 2.6rem;
   }
 
-  .theme-toggle {
+  .brand h1 {
+    font-size: 1.4rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .top-controls {
     top: 25px;
     right: 25px;
   }
 
 }
-
