@@ -17,7 +17,6 @@
 
 <div class="auth-container">
 
-  <!-- LOGO -->
   <a href="../index/index.html" class="brand">
     <div class="logo-icon"><i class="fas fa-leaf"></i></div>
     <div>
@@ -32,17 +31,17 @@
 
     <h2>Sign Up</h2>
 
-    <!-- NAME -->
+    
     <div class="input-group">
       <input type="text" placeholder="Full Name" required>
     </div>
 
-    <!-- EMAIL -->
+    
     <div class="input-group">
       <input type="email" placeholder="Email address" required>
     </div>
 
-    <!-- PASSWORD -->
+    
     <div class="input-group password-group">
       <input type="password" id="signupPassword" placeholder="Password" required>
       <span class="toggle-password" data-target="signupPassword">
@@ -50,7 +49,7 @@
       </span>
     </div>
 
-    <!-- CONFIRM PASSWORD -->
+    
     <div class="input-group password-group">
       <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
       <span class="toggle-password" data-target="confirmPassword">
@@ -58,7 +57,7 @@
       </span>
     </div>
 
-    <!-- TERMS -->
+    
     <div class="options">
       <label class="checkbox">
         <input type="checkbox" required>
@@ -67,10 +66,10 @@
       </label>
     </div>
 
-    <!-- BUTTON -->
+    
     <button type="submit" class="btn-primary">Create Account</button>
 
-    <!-- SOCIAL -->
+    
     <div class="social">
       <button class="social-btn google">
         <i class="fab fa-google"></i>
@@ -94,7 +93,7 @@
 
 
 <script>
-// PASSWORD TOGGLE (MULTIPLE FIELDS)
+
 document.querySelectorAll(".toggle-password").forEach(icon => {
   icon.onclick = () => {
     const input = document.getElementById(icon.dataset.target);
@@ -103,12 +102,12 @@ document.querySelectorAll(".toggle-password").forEach(icon => {
   };
 });
 
-// DARK MODE
+
 document.getElementById("themeBtn").onclick = () => {
   document.body.classList.toggle("dark");
 };
 
-// RTL
+
 document.getElementById("rtlBtn").onclick = () => {
   document.documentElement.dir =
     document.documentElement.dir === "rtl" ? "ltr" : "rtl";

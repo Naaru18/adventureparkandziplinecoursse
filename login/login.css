@@ -23,7 +23,7 @@ body.dark {
   --overlay: rgba(0,0,0,0.6);
 }
 
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +31,7 @@ body.dark {
   font-family: "Poppins", sans-serif;
 }
 
-/* BODY */
+
 body {
   min-height: 100vh;
   display: flex;
@@ -41,7 +41,7 @@ body {
   position: relative;
 }
 
-/* OVERLAY */
+
 body::before {
   content: "";
   position: absolute;
@@ -50,7 +50,7 @@ body::before {
   backdrop-filter: blur(8px);
 }
 
-/* TOP CONTROLS */
+
 .top-controls {
   position: absolute;
   top: 20px;
@@ -68,7 +68,7 @@ body::before {
   cursor: pointer;
 }
 
-/* CARD */
+
 .auth-container {
   position: relative;
   z-index: 1;
@@ -81,7 +81,7 @@ body::before {
   box-shadow: 0 25px 60px rgba(0,0,0,0.3);
 }
 
-/* BRAND */
+
 .brand {
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@ body::before {
   color: var(--muted);
 }
 
-/* TAGLINE */
+
 .tagline {
   text-align: center;
   font-size: 0.9rem;
@@ -125,14 +125,14 @@ body::before {
   color: var(--muted);
 }
 
-/* FORM */
+
 .auth-form h2 {
   text-align: center;
   margin-bottom: 18px;
   color: var(--text);
 }
 
-/* INPUT */
+
 .input-group {
   margin-bottom: 14px;
 }
@@ -153,7 +153,7 @@ input:focus {
   outline: none;
 }
 
-/* PASSWORD */
+
 .password-group {
   position: relative;
 }
@@ -166,7 +166,7 @@ input:focus {
   color: var(--muted);
 }
 
-/* OPTIONS */
+
 .options {
   display: flex;
   justify-content: space-between;
@@ -175,7 +175,7 @@ input:focus {
   margin-bottom: 18px;
 }
 
-/* CHECKBOX */
+
 .checkbox {
   display: flex;
   align-items: center;
@@ -210,13 +210,13 @@ input:focus {
   top: -1px;
 }
 
-/* LINKS */
+
 .options a {
   color: var(--accent);
   text-decoration: none;
 }
 
-/* BUTTON */
+
 .btn-primary {
   width: 100%;
   padding: 14px;
@@ -233,7 +233,7 @@ input:focus {
   background: var(--accent);
 }
 
-/* SOCIAL */
+
 .social {
   margin-top: 16px;
   display: flex;
@@ -265,11 +265,11 @@ input:focus {
   color: #000;
 }
 
-/* APPLE ICON IN DARK MODE */
+
 body.dark .apple i {
   color: #fff;
 }
-/* PASSWORD ICON POSITION FIX (FOR MULTIPLE FIELDS) */
+
 .password-group {
   position: relative;
 }
@@ -282,7 +282,7 @@ body.dark .apple i {
   color: var(--muted);
 }
 
-/* SWITCH */
+
 .switch-text {
   margin-top: 14px;
   text-align: center;
