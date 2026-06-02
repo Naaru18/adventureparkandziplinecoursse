@@ -88,8 +88,20 @@ body {
 
 
 .btn.secondary {
-  color: #fff;
-  background: #e66a00;
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
+  background:#3b82f6;
+  color:#fff;
+}
+.btn.secondary:hover{
+  background:#e66a00;
+  transform:translateY(-3px);
 }
 
 body.dark .hero h1 {
@@ -99,19 +111,6 @@ body.dark .hero h1 {
 body.dark .hero p {
   color: #fff;
 }
-
-
-
-
-.btn.secondary:hover {
-  background: #3b82f6;
-  border-color: #FF6A00;
-  color: #fff;
-}
- body.dark .btn.secondary{
-  background:#3b82f6;
-  color: #fff;
- }
 body.dark .hero-overlay {
   background: rgba(0,0,0,0.65);
 }
@@ -137,11 +136,6 @@ body.dark .btn.secondary {
   color: #fff;
 }
 
-body.dark .btn.secondary:hover {
-  background: #3b82f6;
-  border-color: #3b82f6;
-  color: #fff;
-}
 
 @media (max-width: 639px) {
 
@@ -519,22 +513,22 @@ body.dark .plan-card p {
 
 
 .plan-card button {
-  padding: 12px 24px;
-  border-radius: 10px;
-  border: none;
-  background: #3b82f6;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
+  color:#fff;
+  background-color: #3b82f6;
 }
 
 .plan-card button:hover {
-  background: #e66a00;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(230,106,0,0.35);
+  background:#e66a00;
+  transform:translateY(-3px);
 }
-
-
 .popular {
   border: 2px solid #3b82f6;
   transform: scale(1.05);
@@ -744,19 +738,24 @@ body.dark .featured-text h1{
 }
 
 .featured-text button {
-  padding: 14px 28px;
-  border-radius: 10px;
-  border: none;
   background: #3b82f6;
   color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
+  
 }
 
 .featured-text button:hover {
-  background: #e66a00;
-  transform: translateY(-2px);
+  background:#e66a00;
+  transform:translateY(-3px);
 }
+
 .featured-visual {
   display: flex;
   justify-content: center;

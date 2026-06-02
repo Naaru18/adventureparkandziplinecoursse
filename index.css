@@ -54,22 +54,33 @@ body {
 }
 
 .btn {
-  padding: 12px 22px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s;
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
 }
 
 .btn.primary {
-  background: #3b82f6;
-  color: #fff;
+  background:#3b82f6;
+  color:#fff;
 }
 
+.btn.primary:hover{
+  background:#e66a00;
+  transform:translateY(-3px);
+}
 .btn.secondary {
-  color: #000;
+  background:#e66a00;
+  color:#fff;
 }
-
+.btn.secondary:hover{
+  background:#3b82f6;
+  transform:translateY(-3px);
+}
 body.dark .hero h1 {
   color: #fff;
 }
@@ -77,21 +88,6 @@ body.dark .hero h1 {
 body.dark .hero p {
   color: #fff;
 }
-
-body.dark .btn.primary {
-  background: #e66a00;
-  color: #fff; 
-}
-
-body.dark .btn.secondary {
-  color: #fff;
-}
-
-body.dark .btn.secondary:hover {
-  background: #fff;
-  color: #000;
-}
-
 @media (max-width: 1024px) {
   .hero {
     height: 60vh;
@@ -124,7 +120,7 @@ body.dark .btn.secondary:hover {
 
   .buttons {
     flex-direction: column;
-    gap: 0px;
+    gap: 15px;
   }
 
   .btn {
@@ -515,21 +511,23 @@ body.dark .info {
 }
 
 .price-row button {
-  background: var(--orange);
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
   cursor: pointer;
   transition: 0.3s;
   background-color: #3b82f6;
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
 }
 
 .price-row button:hover {
-  background: #e66a00;
-  transform: scale(1.05);
+  background:#e66a00;
+  transform:translateY(-3px);
 }
-
 .card {
   animation: fadeUp 0.8s ease forwards;
 }
@@ -758,35 +756,6 @@ body.dark .section-subtitle{
 .center-img img:hover {
   transform: scale(1.05);
 }
-
-.btn {
-  margin-top: 20px;
-  padding: 12px 25px;
-  border: none;
-  background: #e66a00;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #3b82f6;
-}
-
-body.dark .item h3 {
-  
-  color:#e66a00;
-}
-
-body.dark .btn {
-  background: #3b82f6;
-}
-
-body.dark .btn:hover {
-  background: #e66a00;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -808,6 +777,23 @@ body.dark .btn:hover {
 .center-img img {
   width: 100%;
   height: auto;
+}
+
+.adventure-btn{
+  margin-top:30px;
+  padding:12px 16px  !important;
+  border:none;
+  border-radius:6px;
+  background:#3b82f6 !important;
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.adventure-btn:hover{
+  background:#e66a00 !important;
+  transform:translateY(-3px);
 }
 
 @media (min-width: 640px) {
@@ -1569,19 +1555,12 @@ body.dark .why-choose .btn:hover {
     height: 320px;
   }
 }
-
-
 @media (min-width: 1280px) {
 
   .why-choose .center-img img {
     height: 380px;
   }
 }
-
-
-
-
-
 
 .faq {
   padding: 50px 20px;
@@ -1922,38 +1901,43 @@ body.dark .cta-container {
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+ 
 }
 .btn-primary {
-  padding: 12px 30px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-
-  background: #3b82f6;
-  color: #fff;
-
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+ background:#3b82f6;
+  color:#fff;
+   display:inline-block;
+  padding:12px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
 }
 
 .btn-secondary {
-  padding: 12px 30px;
-  border-radius: 6px;
-  cursor: pointer;
-
-  background: #e66a00;
-  color: #FFF;
+   background:#e66a00;
+  color:#fff;
+   display:inline-block;
+  padding:12px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px) scale(1.05);
+  background:#e66a00;
+  transform:translateY(-3px);
 }
 
 .btn-secondary:hover {
-  background: #00BFFF;
-  color: #fff;
+  background:#3b82f6;
+  transform:translateY(-3px);
 }
-
 @media (max-width: 639px) {
 
   .cta {
@@ -2030,7 +2014,6 @@ body.dark .ez-sec-subheading{
   color: #ccc;
 }
 
-/* ===== Small Tag ===== */
 .ez-sec-tag{
   display: inline-block;
   font-size: 14px;

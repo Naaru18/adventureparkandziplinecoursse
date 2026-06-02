@@ -383,22 +383,21 @@ body.dark #mobileMenuBtn{
 }
 
 .ez-action-btn {
-  display: flex;
   align-items: center;
   gap: 6px;
-
-  padding: 8px 14px;
-  border-radius: 8px;
   text-decoration: none;
-
   font-size: 0.85rem;
   font-weight: 600;
-
-  background: #3b82f6;
-  color: #fff;
-
   border: none;
-  transition: all 0.25s ease;
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  cursor:pointer;
+  background:#3b82f6;
+  color:#fff;
 }
 
 .ez-action-btn.outline {
@@ -409,8 +408,8 @@ body.dark #mobileMenuBtn{
 
 
 .ez-action-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  background:#e66a00;
+  transform:translateY(-3px);
 }
 
 .ez-action-btn.outline:hover {
@@ -418,8 +417,6 @@ body.dark #mobileMenuBtn{
   color: var(--ez-accent);
   border-color: var(--ez-accent);
 }
-
-
 .ez-icon-sun { display: none; }
 .ez-icon-moon { display: block; }
 [data-theme="dark"] .ez-icon-sun  { display: block; }

@@ -227,7 +227,7 @@ input:focus {
 
 .btn-primary {
   width: 100%;
-  padding: 14px;
+  padding: 10px;
   border-radius: 10px;
   border: none;
   background: var(--primary);

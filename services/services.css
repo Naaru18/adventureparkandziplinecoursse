@@ -93,39 +93,36 @@ body.dark .xp-hero-inner h1{
 }
 
 .xp-btn {
-  padding: 12px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
+   display:inline-block;
+  padding:10px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
 }
 
 .xp-btn-primary {
-  background: var(--orange);
-  color: var(--white);
+  background:#3b82f6;
+  color:#fff;
 }
 
-body.dark .xp-btn-primary{
-  background: var(--blue);
-  color: var(--white);
-}
+
 .xp-btn-primary:hover {
-  background: var(--orange-light);
+  background:#e66a00;
+  transform:translateY(-3px);
 }
 
 .xp-btn-outline {
-  background-color: #3b82f6;
-  color: #fff;
-}
-body.dark .xp-btn-outline{
-  background: var(--orange);
-  color: var(--white);
-  
+  background:#e66a00;
+  color:#fff;
 }
 
+
 .xp-btn-outline:hover {
-  background: var(--blue);
-  color: var(--white);
+  background:#3b82f6;
+  transform:translateY(-3px);
 }
 .xp-hero-section {
   padding: 140px 40px 100px;
@@ -344,19 +341,23 @@ body.dark .service {
 
 .btn {
   display: inline-block;
-  background: var(--blue);
   color: #fff;
-  padding: 12px 22px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: 0.3s;
+  padding:10px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
+   background:#3b82f6;
+  color:#fff;
 }
 
 .btn:hover {
-  background: var(--orange);
-  transform: translateY(-2px);
+  background:#e66a00;
+  transform:translateY(-3px);
 }
+
 
 .service-img {
   flex: 1;
@@ -531,21 +532,24 @@ body.dark .contact-form textarea {
 }
 
 .contact-form button {
-  padding: 12px;
-  border: none;
+  padding: 10px;
   border-radius: 6px;
-  background: var(--blue);
+  background: #3b82f6;
   color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:6px;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  border:none;
+  cursor:pointer;
 }
 
 .contact-form button:hover {
-  background: var(--orange);
-  transform: translateY(-2px);
+   background:#e66a00;
+  transform:translateY(-3px);
 }
-
 @media (max-width: 640px) {
   .contact-section {
     padding: 60px 15px;
