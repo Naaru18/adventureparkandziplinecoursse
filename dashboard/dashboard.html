@@ -14,8 +14,15 @@
 
   <aside class="sidebar">
     <div class="sidebar-header">
-      <button id="sidebarToggle"><i class="fas fa-bars"></i></button>
-      <h2 class="sidebar-title">Adventure</h2>
+      
+      <a href="../index.html" class="ez-brand">
+  <span class="ez-logo-icon"><i class="fas fa-leaf"></i></span>
+
+  <div class="ez-logo-text">
+    <span class="ez-logo-main">EcoZip</span>
+    <span class="ez-logo-sub">Adventure</span>
+  </div>
+</a>
     </div>
     <ul class="sidebar-menu">
       <li class="active"><a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a></li>
@@ -36,8 +43,8 @@
         <div class="theme-switch">
           
 <div class="notification-wrapper">
-  <i class="fas fa-bell" id="notifBtn"></i>
-  <span class="notif-count">3</span>
+  <i class="fas fa-bell" ></i>
+  <span class="notif-count" id="notifBtn">3</span>
   <div class="notif-dropdown" id="notifDropdown">
     <p>New booking received</p>
     <p>Weather alert issued</p>
@@ -50,6 +57,9 @@
     <i class="fas fa-moon" id="themeIcon"></i>
 </label>
  <i class="fas fa-user-circle" id="profileBtn"></i>
+ <button id="mobileMenuBtn">
+  <i class="fas fa-bars"></i>
+</button>
         </div>
       </div>
     </header>
@@ -189,52 +199,47 @@
   </main>
 </div>
 <script>
-const sidebar = document.querySelector('.sidebar');
-const toggleBtn = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.sidebar');
 const themeToggle = document.getElementById('themeToggle');
-
-toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('collapsed');
-});
-
 const themeIcon = document.getElementById('themeIcon');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 
-themeToggle.addEventListener('change', () => {
-  document.body.classList.toggle('dark');
+if (themeToggle) {
+  themeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
 
-  if (document.body.classList.contains('dark')) {
+    if (document.body.classList.contains('dark')) {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    } else {
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    }
+  });
+}
+
+if (
+  window.matchMedia &&
+  window.matchMedia('(prefers-color-scheme: dark)').matches
+) {
+  document.body.classList.add('dark');
+
+  if (themeToggle) {
+    themeToggle.checked = true;
+  }
+
+  if (themeIcon) {
     themeIcon.classList.remove('fa-moon');
     themeIcon.classList.add('fa-sun');
-  } else {
-    themeIcon.classList.remove('fa-sun');
-    themeIcon.classList.add('fa-moon');
   }
-});
-const notifBtn = document.getElementById('notifBtn');
-const notifDropdown = document.getElementById('notifDropdown');
-
-notifBtn.addEventListener('click', (e) => {
-  e.stopPropagation(); // 🔥 important fix
-  notifDropdown.style.display =
-    notifDropdown.style.display === 'block' ? 'none' : 'block';
-});
-
-notifDropdown.addEventListener('click', (e) => {
-  e.stopPropagation();
-});
-
-document.addEventListener('click', () => {
-  notifDropdown.style.display = 'none';
-});
-
-if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
-  document.body.classList.add('dark');
-  themeToggle.checked = true;
 }
 
 document.querySelectorAll('.event-card').forEach(card => {
   card.addEventListener('click', () => {
-    document.querySelectorAll('.event-card').forEach(c => c.classList.remove('active-event'));
+    document
+      .querySelectorAll('.event-card')
+      .forEach(c => c.classList.remove('active-event'));
+
     card.classList.add('active-event');
   });
 });
@@ -243,38 +248,63 @@ document.querySelectorAll('.chart-bar .bar').forEach(bar => {
   bar.addEventListener('mouseenter', () => {
     bar.style.opacity = '0.8';
   });
+
   bar.addEventListener('mouseleave', () => {
     bar.style.opacity = '1';
   });
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+
   document.querySelectorAll('.pop-bar').forEach(bar => {
     const width = bar.style.width;
+
     bar.style.width = '0';
+
     setTimeout(() => {
       bar.style.width = width;
     }, 100);
   });
+
+  const notifBtn = document.getElementById('notifBtn');
+  const notifDropdown = document.getElementById('notifDropdown');
+
+  if (notifBtn && notifDropdown) {
+
+    notifBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      notifDropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (
+        !notifDropdown.contains(e.target) &&
+        !notifBtn.contains(e.target)
+      ) {
+        notifDropdown.classList.remove('show');
+      }
+    });
+  }
 });
 
-const profileBtn = document.getElementById('profileBtn');
+if (mobileMenuBtn) {
 
-profileBtn.addEventListener('click', () => {
-  if (window.innerWidth < 640) {
+  mobileMenuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     sidebar.classList.toggle('mobile-active');
-  }
-});
-document.addEventListener('click', (e) => {
-  if (
-    window.innerWidth < 640 &&
-    !e.target.closest('.sidebar') &&
-    !e.target.closest('#profileBtn')
-  ) {
-    sidebar.classList.remove('mobile-active');
-  }
-});
+  });
 
+  document.addEventListener('click', (e) => {
+    if (
+      window.innerWidth < 640 &&
+      !e.target.closest('.sidebar') &&
+      !e.target.closest('#mobileMenuBtn')
+    ) {
+      sidebar.classList.remove('mobile-active');
+    }
+  });
+
+}
 </script>
 </body>
 </html>

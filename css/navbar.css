@@ -199,24 +199,44 @@ body {
   border-radius: 2px;
 }
 
-.ez-submenu {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%) translateY(6px);
-  background: var(--ez-bg);
-  border: 1px solid var(--ez-border);
-  border-radius: 14px;
-  box-shadow: var(--ez-drop-shadow);
-  min-width: 230px;
-  padding: 0.5rem;
-  opacity: 0;
-   pointer-events: auto; 
-  transition: opacity 0.22s ease, transform 0.22s ease;
-  z-index: 500;
+.ez-submenu{
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--ez-bg);
+  border:1px solid var(--ez-border);
+  border-radius:14px;
+  box-shadow:var(--ez-drop-shadow);
+  min-width:230px;
+  padding:0.5rem;
+
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+
+  z-index:9999;
+
+  transition:0.25s ease;
 }
 
+.ez-item:hover .ez-submenu {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 
+#mobileMenuBtn{
+  display:none;
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:1.4rem;
+  color:var(--text-light);
+}
+
+body.dark #mobileMenuBtn{
+  color:#fff;
+}
 .ez-submenu::before {
   content: '';
   position: absolute;
@@ -231,10 +251,31 @@ body {
   transform: translateX(-50%) rotate(45deg);
 }
 
-.ez-item:hover .ez-submenu {
-  opacity: 1;
-  
-  transform: translateX(-50%) translateY(0);
+.ez-item:hover .ez-submenu,
+.ez-submenu:hover{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateX(-50%);
+}
+.ez-has-sub{
+  position:relative;
+}
+
+.ez-has-sub::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
+  height:15px;
+}
+.ez-nav-root{
+  overflow:visible;
+}
+
+.ez-nav-container{
+  overflow:visible;
 }
 
 .ez-sub-link {
@@ -325,7 +366,7 @@ body {
 
 .ez-theme-btn {
   width: 40px;
-  height: 40px;
+  height: 36px;
   border-radius: 9px;
   border: 1px solid var(--ez-fg);
   background: none;
@@ -390,7 +431,7 @@ body {
   justify-content: center;
   gap: 5.5px;
   width: 40px;
-  height: 40px;
+  height: 36px;
   border: 1px solid var(--ez-border);
   background: none;
   border-radius: 9px;

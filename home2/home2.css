@@ -207,16 +207,14 @@ body.dark .ecozip {
 
 
 .ecozip-text h2 {
-  font-size: 32px;   
+  font-size: 32px !important;
+  font-weight: 600;
+  line-height: 1.3;
   color: #3b82f6;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  text-align: left;
 }
 
-.ecozip-text h2 span {
-  background: linear-gradient(135deg, #3b82f6, #e66a00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 
 body.dark .ecozip-text h2 {
@@ -224,15 +222,18 @@ body.dark .ecozip-text h2 {
 }
 
 
-
 .ecozip-text .lead {
-  margin: 20px 0;
-  font-size: 1.2rem;
-  color: rgba(0,0,0,0.8);
+   font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: left;
 }
 
 body.dark .ecozip-text .lead {
-  color: rgba(255,255,255,0.85);
+  color: #ccc;
 }
 
 .ecozip-text p {
@@ -433,7 +434,7 @@ body.dark .feature-card p {
 }
 
 body.dark .pricing {
-  background: #000;
+  background: #111;
   color: #fff;
 }
 
@@ -669,15 +670,29 @@ body.dark .popular {
 }
 
 .featured-text h2 {
+ font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
   color: #3b82f6;
+  margin-bottom: 12px;
+  text-align: left;
 }
 body.dark .featured-text h2 {
   color: #e66a00;
 }
 
 .featured-text h1 {
-  font-size: 2.7rem;
-  margin: 10px 0;
+ font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #666;
+  max-width: 650px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+body.dark .featured-text h1{
+  color: #ccc;
 }
 
 .featured-text p {
@@ -901,7 +916,9 @@ body.dark .featured-text h2 {
   background: #f9fafb;
   color: #111;
 }
-
+body.dark .eco{
+  background: #111 !important;
+}
 .eco-container {
   max-width: 1150px;
   margin: auto;
@@ -913,8 +930,12 @@ body.dark .featured-text h2 {
 
 
 .eco-left h2 {
-  color:#3b82f6;
-  font-size: 1rem;
+   font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #3b82f6;
+  margin-bottom: 12px;
+  text-align: left;
 }
 
 body.dark .eco-left h2 {
@@ -922,9 +943,17 @@ body.dark .eco-left h2 {
 }
 
 .eco-left h1 {
-  font-size: 2.8rem;
-  margin: 10px 0;
-  color: #111;
+   font-size: 16px !important;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #666;
+  max-width: 650px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+body.dark .eco-left h1{
+  color: #ccc;
 }
 
 .eco-left p {
@@ -1100,13 +1129,28 @@ body.dark .eco-card.highlight {
 }
 
 .testimonial h2 {
-  font-size: 2.4rem;
-  color:#3b82f6;
+  font-size: 32px !important;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #3b82f6;
+  margin-bottom: 12px;
+  text-align: center;
 }
 body.dark .testimonial h2{
   color:#e66a00;
 }
-
+.testimonial p{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+body.dark .testimonial p{
+  color: #ccc;
+}
 .sub {
   margin: 15px 0 40px;
   color: rgba(0,0,0,0.7);
@@ -1117,10 +1161,11 @@ body.dark .testimonial h2{
 }
 
 .cards {
-  display: flex;
+    display: flex;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .card {
@@ -1132,6 +1177,9 @@ body.dark .testimonial h2{
 
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
 }
 
 .dark .card {
@@ -1145,10 +1193,21 @@ body.dark .testimonial h2{
 
 .card p {
   font-size: 14px;
-  margin-bottom: 12px;
+  line-height: 1.7;
+  margin-bottom: 16px;
   color: rgba(0,0,0,0.75);
+
+  flex-grow: 1;
 }
 
+.user{
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.dark .user {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
 .dark .card p {
   color: rgba(255,255,255,0.75);
 }
@@ -1180,12 +1239,53 @@ body.dark .testimonial h2{
   color: #e66a00;
 }
 
+
+.states {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px; 
+  margin-bottom: 20px;
+
+}
+
+.states-title {
+  margin-top: 35px;
+  font-size: 18px;
+  color: rgba(0,0,0,0.7);
+}
+
+.dark .states-title {
+  color: rgba(255,255,255,0.75);
+}
+
+.states-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.state{
+  width: 180px;
+  padding: 18px;
+  border-radius: 12px;
+  transition: 0.3s;
+  height:100px;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.dark .state {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.08);
+}
 .stats {
   margin-top: 60px;
+  padding-left: 150px;
 }
 
 .stats-title {
-  margin-bottom: 25px;
+  margin-top: 35px;
   font-size: 18px;
   color: rgba(0,0,0,0.7);
 }
@@ -1206,7 +1306,7 @@ body.dark .testimonial h2{
   padding: 18px;
   border-radius: 12px;
   transition: 0.3s;
-
+  height:100px;
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.08);
 }
@@ -1281,7 +1381,7 @@ body.dark .testimonial h2{
   }
 
   .card {
-    width: 45%;
+    width: 320px;
   }
 
   .stats-row {
@@ -1314,3 +1414,69 @@ body.dark .testimonial h2{
     width: 280px;
   }
 }
+
+
+
+
+.ez-sec-heading{
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #3b82f6;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+body.dark .ez-sec-heading{
+  color: #e66a00;
+}
+.ez-sec-subheading{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+body.dark .ez-sec-subheading{
+  color: #ccc;
+}
+
+.ez-sec-tag{
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+body.dark .ez-sec-tag{
+  color: #e66a00;
+}
+
+@media (max-width:640px){
+
+  .ez-sec-heading{
+    font-size: 26px;
+  }
+
+  .ez-sec-subheading{
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+
+  .ez-sec-tag{
+    font-size: 13px;
+  }
+
+}
+
+
+
+
+
+

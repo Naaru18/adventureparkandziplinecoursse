@@ -982,6 +982,7 @@ body.dark .exp-line {
   animation: ripple 1.5s infinite;
 }
 
+
 @keyframes ripple {
   0% { transform: scale(1); opacity: 0.6; }
   100% { transform: scale(1.6); opacity: 0; }
@@ -1153,9 +1154,6 @@ body.dark .step h3 {
     font-size: 1rem;
   }
 }
-/* =========================
-   TESTIMONIALS SECTION
-========================= */
 .testimonials {
   padding: 50px 20px;
   background: #ffffff;
@@ -1168,7 +1166,6 @@ body.dark .testimonials {
   background: #000000;
   color: #ffffff;
 }
-
 
 .testimonials-header h2 {
   font-size: 42px;
@@ -1190,9 +1187,6 @@ body.dark .testimonials-header p {
   color: #9ca3af;
 }
 
-/* =========================
-   GRID LAYOUT
-========================= */
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1201,9 +1195,6 @@ body.dark .testimonials-header p {
   margin: auto;
 }
 
-/* =========================
-   CARD
-========================= */
 .testimonial-card {
   padding: 30px;
   border-radius: 20px;
@@ -1212,25 +1203,27 @@ body.dark .testimonials-header p {
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 body.dark .testimonial-card {
   background: #08090a;
-  border: 2px solid #113e7e;
+  border: 2px solid #ffffff;
 }
-
 
 .testimonial-card:hover {
   transform: translateY(-10px) scale(1.03);
   border-color: #3b82f6;
-  box-shadow: 
-    0 12px 30px rgba(0,0,0,0.2),
-    0 0 20px rgba(59,130,246,0.2);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(59, 130, 246, 0.2);
 }
 
-/* =========================
-   CONTENT
-========================= */
+body.dark .testimonial-card:hover {
+  border-color: #3b82f6;
+}
+
 .stars {
   color: #e66a00;
   font-size: 18px;
@@ -1241,8 +1234,10 @@ body.dark .testimonial-card {
   margin: 15px 0;
   font-size: 15px;
   line-height: 1.6;
-}
 
+  /* Makes all cards align evenly */
+  flex-grow: 1;
+}
 
 .avatar {
   width: 70px;
@@ -1254,12 +1249,10 @@ body.dark .testimonial-card {
   border: 3px solid #3b82f6;
 }
 
-
 .name {
   font-size: 18px;
   margin-top: 5px;
 }
-
 
 .role {
   font-size: 14px;
@@ -1270,9 +1263,6 @@ body.dark .role {
   color: #9ca3af;
 }
 
-/* =========================
-   ANIMATION
-========================= */
 .testimonial-card {
   animation: fadeUp 0.8s ease forwards;
 }
@@ -1288,9 +1278,6 @@ body.dark .role {
   }
 }
 
-/* =========================
-   MOBILE (<=640px)
-========================= */
 @media (max-width: 640px) {
 
   .testimonials {
@@ -1329,9 +1316,6 @@ body.dark .role {
   }
 }
 
-/* =========================
-   TABLET (641px - 1024px)
-========================= */
 @media (min-width: 641px) and (max-width: 1024px) {
 
   .testimonials {
@@ -1348,9 +1332,6 @@ body.dark .role {
   }
 }
 
-/* =========================
-   SMALL LAPTOP (1025px - 1280px)
-========================= */
 @media (min-width: 1025px) and (max-width: 1280px) {
 
   .testimonials-grid {
@@ -1358,9 +1339,6 @@ body.dark .role {
   }
 }
 
-/* =========================
-   LARGE SCREENS (>=1281px)
-========================= */
 @media (min-width: 1281px) {
 
   .testimonials-grid {

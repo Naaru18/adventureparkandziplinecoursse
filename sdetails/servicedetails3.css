@@ -28,6 +28,7 @@
   z-index: 1;
 }
 
+
 .banner-content {
   position: relative;
   z-index: 2;
@@ -188,9 +189,10 @@ body.dark {
 }
 
 .content-left h1 {
-  font-size: 48px;
+  font-size: 45px  !important;
   line-height: 1.2;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .description {
@@ -437,13 +439,13 @@ body.dark {
   color: #e66a00;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  font-size: 20px  !important;
 }
 
 .top-content h1 {
-  font-size: 38px;
+  font-size: 32px  !important;
   margin-bottom: 15px;
 }
-
 .top-content p {
   color: #555;
   line-height: 1.7;
