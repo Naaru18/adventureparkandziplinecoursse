@@ -456,14 +456,14 @@ body.dark .info-item p{
 }
 
 .xp-map-section {
-  padding: 20px;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   background: #ffffff;
 }
 
 body.dark .xp-map-section {
-  background: #000000;
+  background: #111;
 }
 
 

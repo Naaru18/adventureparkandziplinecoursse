@@ -514,7 +514,7 @@ body.dark .plan-card p {
 
 .plan-card button {
   display:inline-block;
-  padding:12px 16px;
+  padding:10px 16px;
   border-radius:6px;
   font-weight:600;
   text-decoration:none;
@@ -741,7 +741,7 @@ body.dark .featured-text h1{
   background: #3b82f6;
   color: #fff;
   display:inline-block;
-  padding:12px 16px;
+  padding:10px 16px;
   border-radius:6px;
   font-weight:600;
   text-decoration:none;

@@ -698,14 +698,18 @@ body.dark {
   transition: 0.3s;
 }
 .achievements{
-  background: var(--bg);
+  background: #fff;
 }
+
 .why-section {
    background: #fff;
 }
 
 body.dark .why-section{
   background: #111;
+}
+body.dark .achievements{
+  background: #000;
 }
 .achieve-container {
   max-width: 1100px;
@@ -955,7 +959,7 @@ body.dark .gallery-header h2{
   opacity: 0.7;
 }
 body.dark .gallery{
-  background-color: #111;
+  background-color: #000;
   color: #fff;
 }
 .gallery-container {
@@ -1059,7 +1063,7 @@ body.dark .gallery{
   color: #000;
 }
 body.dark .xp-cta-section {
-  background: #000;
+  background: #111;
   color: #fff;
 }
 
