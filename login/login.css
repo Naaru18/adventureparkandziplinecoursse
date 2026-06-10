@@ -285,11 +285,15 @@ body.dark .apple i {
 .password-group .toggle-password {
   position: absolute;
   right: 12px;
-  top: 14px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
   color: var(--muted);
 }
-
+html[dir="rtl"] .password-group .toggle-password{
+  right: auto;
+  left: 12px;
+}
 
 .switch-text {
   margin-top: 14px;

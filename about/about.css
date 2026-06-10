@@ -378,7 +378,6 @@ body.dark .story-content h2{
 
 .activity-card {
   position: relative;
-  padding: 28px 22px;
   border-radius: 18px;
   text-align: center;
   transition: 0.35s;
@@ -394,31 +393,27 @@ background: rgba(59,130,246,0.08);
   border: 1px solid rgba(255,255,255,0.12);
 }
 
-.icon-box {
-  width: 65px;
-  height: 65px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
+.icon-box{
+  width:100%;
+  height:250px;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 28px;
-
-  background: linear-gradient(135deg, var(--blue), var(--orange));
-  color: #fff;
+.icon-box img{
+  width:100%;
+  height:100%;
 }
 
 .activity-card h3 {
   font-size: 18px;
-  margin-bottom: 8px;
+  padding: 10px;
+  margin-top: 5px;
 }
 
 .activity-card p {
   font-size: 13.5px;
   line-height: 1.5;
   color: rgba(0,0,0,0.75);
+  padding:0px 10px 10px 10px;
 }
 
 
