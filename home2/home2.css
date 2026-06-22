@@ -188,7 +188,7 @@ body.dark .btn.secondary {
 
 .ecozip {
   padding: 100px 20px;
-  background: #ffffff;
+  background: #f1f5f9;
   color: #000;
 }
 
@@ -645,7 +645,7 @@ body.dark .popular {
 
 .featured {
   padding: 50px 20px;
-  background: #f9fafb;
+  background: #f1f5f9;
   color: #111;
 }
 
@@ -1111,7 +1111,7 @@ body.dark .eco-card.highlight {
 }
 
 .testimonial {
-  background: #f9fafb;
+  background: #f1f5f9;
   color: #111;
   padding: 0px 20px 100px;
   text-align: center;

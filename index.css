@@ -621,7 +621,7 @@ body.dark .img2 {
 
 .booking {
   padding: 50px 10%;
-  background: #f8f9fb;
+  background: #f1f5f9;
   text-align: center;
 }
 
@@ -865,7 +865,7 @@ body.dark .card-content p {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f9fb;
+  background: #f1f5f9;
   color: #000;
   transition: 0.4s;
 }
@@ -878,6 +878,7 @@ body.dark {
 .section {
   text-align: center;
   padding: 50px 20px;
+  background: #f1f5f9;;
 }
 body.dark .section{
   background: #000;
@@ -1614,6 +1615,7 @@ body.dark .role {
 .why-choose {
   text-align: center;
   padding: 70px 20px;
+  background: #ffffff;
 }
 
 
@@ -2030,8 +2032,6 @@ body.dark .faq-answer {
   display: flex;
   justify-content: center;
   overflow: hidden;
-
-  
   background: #fff;
   color: #000;
 }
