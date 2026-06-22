@@ -134,6 +134,48 @@ body.dark .btn.secondary:hover {
   }
 }
 
+  .stats-banner{ 
+    width:100%;
+     background:linear-gradient(135deg, var(--orange), var(--orange-deep)); 
+     padding:34px 20px;
+     }
+  .stats-banner-inner{ 
+    width:100%; 
+    max-width:1300px; 
+    margin:0 auto; 
+    display:flex; 
+    justify-content:space-between; 
+    align-items:center; 
+    flex-wrap:wrap;
+   }
+  .stats-banner .stat{ 
+    flex:1 1 0; 
+    padding:0 36px; 
+    text-align:center; 
+  }
+  .stats-banner .stat + .stat{ 
+    border-left:1px solid rgba(255,255,255,0.35); 
+  }
+  .stats-banner .num{
+      display:block; 
+      font-family:'Oswald', sans-serif;
+      font-weight:700; 
+      font-size:2rem;
+      letter-spacing:0.5px; 
+      color:var(--white); 
+      }
+  .stats-banner .label{ 
+    display:block; 
+    font-family:'Sora', sans-serif; 
+    font-size:0.74rem;
+     font-weight:500;
+      letter-spacing:1.4px;
+       text-transform:uppercase;
+        color:var(--white); 
+        opacity:0.92; margin-top:6px; 
+      }
+
+
 .about {
   padding: 100px 20px 50px;
   background: #f8f9fb;
@@ -425,18 +467,49 @@ body.dark .booking p{
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
+.card{
+  background:#fff;
+  border-radius:15px;
+  overflow:hidden;
+  position:relative;
 
-.card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: 0.4s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border:1px solid #3b82f6   !important;
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease,
+    border-color .4s ease;
+
+  box-shadow:
+    0 8px 20px rgba(59,130,246,.08),
+    0 4px 10px rgba(0,0,0,.05);
+
+  will-change:transform;
 }
 
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+.card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:0;
+  background:#3b82f6;
+  transition:height .35s ease;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:#3b82f6;
+
+  box-shadow:
+    0 0 20px rgba(59,130,246,.18),
+    0 15px 35px rgba(59,130,246,.15),
+    0 25px 50px rgba(0,0,0,.12);
+}
+
+.card:hover::after{
+  height:5px !important;
 }
 .card img {
   width: 100%;
@@ -445,7 +518,7 @@ body.dark .booking p{
 }
 
 .card-content {
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
   text-align: left;
 }
 
@@ -503,9 +576,7 @@ body.dark .info {
   transform: scale(1.05);
 }
 
-.card {
-  animation: fadeUp 0.8s ease forwards;
-}
+
 
 @keyframes fadeUp {
   from {
@@ -1234,8 +1305,6 @@ body.dark .testimonial-card:hover {
   margin: 15px 0;
   font-size: 15px;
   line-height: 1.6;
-
-  /* Makes all cards align evenly */
   flex-grow: 1;
 }
 
